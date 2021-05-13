@@ -79,7 +79,7 @@
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
-                            track.applyConstraints({ focusMode: "continous" })
+                            track.applyConstraints({ focusMode: "continous", exposureMode: "manual", exposureCompensation: { exact: -2 } })
                             .then(function() {
                                 console.log('torch')
                                 console.log(track.getSettings())
