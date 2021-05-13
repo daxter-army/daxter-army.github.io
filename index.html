@@ -21,7 +21,7 @@
         var imageCapture;
 
         function onGetUserMediaButtonClick() {
-        navigator.mediaDevices.getUserMedia({video: { advanced: { exposureCompensation: -2 } }})
+        navigator.mediaDevices.getUserMedia({video: { advanced: [{ exposureCompensation: -2 }] }})
         .then(mediaStream => {
             document.querySelector('#video').srcObject = mediaStream;
 
