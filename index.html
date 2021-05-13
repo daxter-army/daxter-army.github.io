@@ -21,13 +21,13 @@
         var imageCapture;
 
         function onGetUserMediaButtonClick() {
-        navigator.mediaDevices.getUserMedia({video: { advanced: [{ exposureCompensation: -2 }] }})
+        navigator.mediaDevices.getUserMedia({video: true})
         .then(mediaStream => {
             document.querySelector('#video').srcObject = mediaStream;
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            // track.applyConstraints({ video: {  }})
+            track.applyConstraints({ advanced: [{ focusMode: "continous" }] })
             console.log(track.getSettings())
             imageCapture = new ImageCapture(track);
         })
@@ -44,7 +44,9 @@
         }
 
         function onTakePhotoButtonClick() {
-        imageCapture.takePhoto()
+        imageCapture.takePhoto({
+            
+        })
         .then(blob => createImageBitmap(blob))
         .then(imageBitmap => {
             const canvas = document.querySelector('#takePhotoCanvas');
