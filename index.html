@@ -88,10 +88,12 @@
                             return item
                         }
                     })
+
+                    return videoSource[0]
                 })
                 .then(function(result) {
                     console.log('deviceId', result)
-                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: "1f0efec6cd6f0f00e9759422fc1af4c3e24135339a24262390c51af6b874612b" }}})
+                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
                         .then(function(stream) {
                             VideoPlayer.srcObject = stream
                         })
