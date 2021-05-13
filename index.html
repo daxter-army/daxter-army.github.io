@@ -79,7 +79,7 @@
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
-                            track.applyConstraints({ focusMode: "continous", advanced: [{ exposureCompensation: -2.00 }, { exposureMode: "manual" }] })
+                            track.applyConstraints({ focusMode: "continous", advanced: [{ exposureCompensation: -1.00 }, { exposureMode: "manual" }] })
                             .then(function() {
                                 console.log('double constrain')
                                 console.log(track.getSettings())
