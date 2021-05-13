@@ -46,12 +46,12 @@ body, html {
     margin: auto;
     margin-top: 30px;
     /* height: 400px; */
-    width: 250px;
+    width: 240px;
     /* border: 2px red solid; */
 }
 
 #instruction {
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: 'DM Sans', sans-serif;
     color: white;
 }

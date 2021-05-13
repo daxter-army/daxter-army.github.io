@@ -15,7 +15,7 @@
         <video id="video-player" autoplay></video>
         <div id="option-box">
             <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
-            <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
+            <p id="instruction">Hover the above box<br/>over the console screen</p>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
                     <i class="fas fa-camera"></i>
@@ -54,24 +54,7 @@
             }
         }
 
-        // If back camera fails, then front camera kicks in
-        // navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
-        //     .then(function(stream) {
-        //         VideoPlayer.srcObject = stream
-        //     })
-        //     .catch(function(err) {
-        //         navigator.mediaDevices.getUserMedia({ video: true })
-        //             .then(function(stream) {
-        //                 const tracks = stream.getVideoTracks()[0]
-        //                 console.log('tracks', tracks)
-        //                 VideoPlayer.srcObject = stream
-        //             })
-        //             .catch(function() {
-        //                 alert('unable to stream camera')
-                        
-        //             })
-        //     })
-
+        // getting available input video sources and then showing stream
             navigator.mediaDevices.enumerateDevices()
                 .then(function(res) {
                     const videoSourcesArr = res.filter(function(item) {
@@ -79,16 +62,12 @@
                             return { label: item.label, deviceId: item.deviceId }
                         }
                     })
-
-                    console.log('camera options', videoSourcesArr)
-
+                    // console.log('camera options', videoSourcesArr)
                     const videoSource = videoSourcesArr.filter(item => {
                         if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
-                            console.log('from inner loop', item)
                             return item
                         }
                     })
-
                     return videoSource[0]
                 })
                 .then(function(result) {
@@ -104,8 +83,6 @@
                 .catch(function(err) {
                     alert('unable to detect back camera!')
                 })
-
-
 
 
             // CaptureBtn.addEventListener('click', function(e) {
