@@ -50,9 +50,7 @@
         // If back camera fails, then front camera kicks in
         navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
             .then(function(stream) {
-                const track = stream.getVideoTracks()[0]
-                track.applyConstraints({ advanced: [{ exposureCompensation: 3 }] })
-                VideoPlayer.srcObject = track
+                VideoPlayer.srcObject = stream
             })
             .catch(function(err) {
                 navigator.mediaDevices.getUserMedia({ video: true })
