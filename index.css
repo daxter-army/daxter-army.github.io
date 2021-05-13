@@ -10,11 +10,7 @@ body, html {
 
 .wrapper {
     position: relative;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     height: 100%;
-    border: 2px red solid;
 }
 
 #video-player {
@@ -24,9 +20,19 @@ body, html {
     transform: translate(-55%, -50%);
 }
 
-#capture-btn {
-    position: absolute;
-    /* top: 0px;
-    left: 0px; */
+/* #capture-btn {
+} */
+
+#target-box {
+    height: 300px;
+    width: 160px;
+    border: 2px red solid;
+}
+
+#option-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
     transform: translate(-50%, -50%);
 }

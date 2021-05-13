@@ -11,7 +11,12 @@
 <body>
     <div class="wrapper">
         <video id="video-player" autoplay></video>
-        <!-- <button type="button" id="capture-btn"><i class="fas fa-camera"></i></button> -->
+        <div id="option-box">
+            <div id="target-box"></div>
+            <!-- <button type="button" id="capture-btn">
+                <i class="fas fa-camera"></i>
+            </button> -->
+        </div>
     </div>
     <script>
         const VideoPlayer = document.getElementById("video-player")
@@ -36,7 +41,7 @@
             }
         }
 
-        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" }} })
+        navigator.mediaDevices.getUserMedia({ video: true })
             .then(function(stream) {
                 VideoPlayer.srcObject = stream
             })
