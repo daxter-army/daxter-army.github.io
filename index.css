@@ -26,6 +26,7 @@ body, html {
     display: block; */
     /* position: absolute;
     bottom: 2rem; */
+    font-size: larger;
     height: 50px;
     width: 50px;
     border: none;
@@ -38,6 +39,16 @@ body, html {
     height: 300px;
     width: 160px;
     border: 2px red solid;
+}
+
+#camera-footer {
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    /* border: 1px yellow solid; */
 }
 
 #option-box {
