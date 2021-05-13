@@ -96,12 +96,14 @@
         
         VideoPlayer.addEventListener('canplay', function(event) {
             console.log('video streaming now')
+            Canvas.setAttribute('width', 300)
             Canvas.setAttribute('height', VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
         })
 
         CaptureBtn.addEventListener('click', function(e) {
             console.log('yes')
             Wrapper.style.display = 'none'
+            Painting.style.display = 'block'
             const drawingBoard = Canvas.getContext('2d')
             drawingBoard.drawImage(VideoPlayer, 0, 0, Canvas.width, VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
             VideoPlayer.srcObject.getVideoTracks().forEach(function(track){
