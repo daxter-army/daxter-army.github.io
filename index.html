@@ -27,7 +27,7 @@
 
             const track = mediaStream.getVideoTracks()[0];
             // track.applyConstraints({ video: {  }})
-            // console.log(track.getSettings())
+            console.log(track.getSettings())
             imageCapture = new ImageCapture(track);
         })
         .catch(error => console.log(error));
