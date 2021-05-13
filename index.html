@@ -27,10 +27,14 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ aspectRatio: 1 })
+            track.applyConstraints({ aspectRatio: 1.2 })
             .then(function() {
                 console.log('yeas')
                 console.log(track.getSettings())
+            })
+            .catch(function(err) {
+                console.log('from catch block')
+                console.log(err)
             })
             imageCapture = new ImageCapture(track);
         })
