@@ -27,7 +27,7 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ advanced: [{ focusMode: "continous" }] })
+            track.applyConstraints({ advanced: [{ brightness: 10 }] })
             console.log(track.getSettings())
             imageCapture = new ImageCapture(track);
         })
