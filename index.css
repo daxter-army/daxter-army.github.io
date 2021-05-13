@@ -41,10 +41,10 @@ body, html {
 #target-box {
     display: block;
     margin: auto;
-    margin-top: 50px;
-    height: 400px;
-    width: 170px;
-    /* border: 2px red solid; */
+    margin-top: 60px;
+    /* height: 400px; */
+    width: 180px;
+    border: 2px red solid;
 }
 
 #instruction {
