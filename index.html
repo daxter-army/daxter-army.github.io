@@ -27,8 +27,9 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ aspectRatio: 1.2 })
+            track.applyConstraints({ aspectRatio: 1 })
             .then(function() {
+                console.log('yeas')
                 console.log(track.getSettings())
             })
             imageCapture = new ImageCapture(track);
