@@ -9,6 +9,21 @@ body, html {
 }
 
 .wrapper {
-    border: 2px red solid;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    border: 2px red solid;
+}
+
+#video-player {
+    overflow: hidden;
+}
+
+#capture-btn {
+    position: absolute;
+    /* top: 0px;
+    left: 0px; */
+    transform: translate(-50%, -50%);
 }
