@@ -14,7 +14,7 @@
     <div class="wrapper">
         <video id="video-player" autoplay></video>
         <div id="option-box">
-            <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
+            <!-- <img id="target-box" src='./rim_slimmed_max_dots_min.svg' /> -->
             <p id="instruction">Hover the above box<br/>over the console screen</p>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
@@ -79,9 +79,9 @@
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
-                            track.applyConstraints({ focusMode: "continous", exposureMode: "manual", exposureCompensation: { exact: -2 } })
+                            track.applyConstraints({ focusMode: "continous", exposureMode: "manual", exposureCompensation: -2.00 })
                             .then(function() {
-                                console.log('torch')
+                                console.log('double constrain')
                                 console.log(track.getSettings())
                             })
                             .catch(function(err) {
