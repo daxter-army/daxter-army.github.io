@@ -27,9 +27,9 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ exposureCompensation: -2 })
+            track.applyConstraints({ advanced: [{ torch: true }]})
             .then(function() {
-                console.log('yeas')
+                console.log('torch')
                 console.log(track.getSettings())
             })
             .catch(function(err) {
