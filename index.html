@@ -27,7 +27,7 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ advanced: [{ brightness: 10 }] })
+            track.applyConstraints({ advanced: [{ brightness: 10.00 }] })
             console.log(track.getSettings())
             imageCapture = new ImageCapture(track);
         })
