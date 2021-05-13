@@ -14,7 +14,7 @@
     <div class="wrapper">
         <video id="video-player" autoplay></video>
         <div id="option-box">
-            <img id="target-box" src='./rim_max_dots_min.svg' />
+            <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
             <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
@@ -62,6 +62,16 @@
                     })
 
             })
+
+            navigator.mediaDevices.enumerateDevices()
+                .then(function(devices) {
+                    devices.forEach(function(device) {
+                        alert(device.kind + ": " + device.label + " id = " + device.deviceId);
+                    });
+                })
+                .catch(function(err) {
+                    console.log(err.name + ": " + err.message);
+                });
         }
 
         capture()
