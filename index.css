@@ -80,3 +80,8 @@ body, html {
     /* border: 1px blue solid; */
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+#canvas {
+    width: 100%;
+    border: 1px red solid;
+}

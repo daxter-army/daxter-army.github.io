@@ -82,7 +82,7 @@
                     })
             })
             .catch(function(err) {
-                alert('unable to detect back camera!')
+                // alert('unable to detect back camera!')
                 // fallback for laptop for testing purposes only
                 navigator.mediaDevices.getUserMedia({ video: true })
                     .then(function(stream) {
