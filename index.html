@@ -82,7 +82,7 @@
 
                     console.log(videoSourcesArr)
                     const videoSource = videoSourcesArr.filter(item => {
-                        if(item.label.toLocaleLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
+                        if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
                             return item
                         }
                     })
