@@ -15,7 +15,7 @@
         <video id="video-player" autoplay></video>
         <div id="option-box">
             <img id="target-box" src='./rim_max_dots_min.svg' />
-            <p id="instruction">Hover the above box<br/> over the console screen</p>
+            <p id="instruction">Hover the above box<br/>over the console screen</p>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
                     <i class="fas fa-camera"></i>
@@ -47,7 +47,7 @@
             }
         }
 
-        // If back camera fails, then front camera picks in
+        // If back camera fails, then front camera kicks in
         navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
             .then(function(stream) {
                 VideoPlayer.srcObject = stream
