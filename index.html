@@ -21,13 +21,13 @@
         var imageCapture;
 
         function onGetUserMediaButtonClick() {
-        navigator.mediaDevices.getUserMedia({video: true})
+        navigator.mediaDevices.getUserMedia({video: { exposureCompensation: -2 }})
         .then(mediaStream => {
             document.querySelector('#video').srcObject = mediaStream;
 
             const track = mediaStream.getVideoTracks()[0];
-            track.applyConstraints({ advanced: [{ exposureCompensation : -2 }] })
-            console.log(track.getSettings())
+            // track.applyConstraints({ video: {  }})
+            // console.log(track.getSettings())
             imageCapture = new ImageCapture(track);
         })
         .catch(error => console.log(error));
