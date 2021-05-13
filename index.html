@@ -50,7 +50,9 @@
         // If back camera fails, then front camera kicks in
         navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
             .then(function(stream) {
-                VideoPlayer.srcObject = stream
+                const track = stream.getVideoTracks()[0]
+                track.applyConstraints({ advanced: [{ exposureCompensation: 3 }] })
+                VideoPlayer.srcObject = track
             })
             .catch(function(err) {
                 navigator.mediaDevices.getUserMedia({ video: true })
@@ -63,15 +65,9 @@
 
             })
 
-            navigator.mediaDevices.enumerateDevices()
-                .then(function(devices) {
-                    devices.forEach(function(device) {
-                        alert(device.kind + ": " + device.label + " id = " + device.deviceId);
-                    });
-                })
-                .catch(function(err) {
-                    console.log(err.name + ": " + err.message);
-                });
+            // getsupportedconstriants
+            let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
+            console.log(supportedConstraints)
         }
 
         capture()
