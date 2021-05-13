@@ -71,12 +71,34 @@
         //             })
         //     })
 
-        navigator.mediaDevices.getUserMedia({ video: true })
+        function findDevices() {
+            navigator.mediaDevices.enumerateDevices()
+                .then(res => {
+                    const videoSourcesArr = res.filter(function(item) {
+                        if(item.kind === 'videoinput') {
+                            return { label: item.label, deviceId: item.deviceId }
+                        }
+                    })
+
+                    console.log(videoSourcesArr)
+                    const videoSource = videoSourcesArr.filter(item => {
+                        if(item.label.toLocaleLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
+                            return item
+                        }
+                    })
+
+                    console.log('video camera should be', videoSource)
+                })
+                .catch()
+        }
+        findDevices()
+
+        navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: videoSource }}})
             .then(function(stream) {
                 var videoTracks = stream.getVideoTracks();
                 // console.log('Got stream with constraints:', constraints);
-                console.log('Using video device: ' + videoTracks[1].label);
-                console.log(videoTracks)
+                // console.log('Using video device: ' + videoTracks[1].label);
+                // console.log(videoTracks)
                 // alert('Using video device: ' + videoTracks[1].label);
                 window.stream = stream; // make variable available to console
                 VideoPlayer.srcObject = stream;
@@ -85,19 +107,7 @@
                 console.log(error)
             })
 
-            navigator.mediaDevices.enumerateDevices()
-                .then(res => {
-                    const videoSourcesArr = res.filter(function(item) {
-                        if(item.kind === 'videoinput') {
-                            return item
-                        }
-                    })
-                    console.log(videoSourcesArr)
-                    videoSourcesArr.map(item => {
-                        document.getElementById("info").insertAdjacentText("afterend", item.label+" ")
-                    })
-                })
-                .catch()
+
 
             // CaptureBtn.addEventListener('click', function(e) {
             //     console.log('yes')
