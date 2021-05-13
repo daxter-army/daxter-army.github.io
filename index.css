@@ -39,19 +39,24 @@ body, html {
 }
 
 #target-box {
-    position: fixed;
     display: block;
     margin: auto;
+    margin-top: 50px;
     height: 300px;
     width: 160px;
-    border: 2px red solid;
+    /* border: 2px red solid; */
+}
+
+#instruction {
+    margin-top: 20px;
+    font-family: 'DM Sans', sans-serif;
+    color: white;
 }
 
 #camera-footer {
-    padding: 15px;
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 25px;
     width: 100%;
     background-color: transparent;
     /* border: 1px yellow solid; */
@@ -70,4 +75,5 @@ body, html {
     z-index: 2;
     /* transform: translate(-50%, -50%); */
     /* border: 1px blue solid; */
+    background-color: rgba(0, 0, 0, 0.3);
 }
