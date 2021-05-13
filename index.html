@@ -16,16 +16,22 @@
         <div id="option-box">
             <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
             <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
+            <canvas id="canvas"></canvas>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
                     <i class="fas fa-camera"></i>
                 </button>
             </div>
+            <h1 style="z-index: 3; color: white;" id="info"></h1>
         </div>
     </div>
+    <img id="photo"/>
     <script>
         const VideoPlayer = document.getElementById("video-player")
-        // const CaptureBtn = document.getElementById("capture-btn")
+        const CaptureBtn = document.getElementById("capture-btn")
+        const Canvas = document.getElementById("canvas")
+        const Photo = document.getElementById("photo")
+        const Wrapper = document.querySelector(".wrapper")
 
         function capture() {
             if(!('mediaDevices' in navigator)) {
@@ -55,17 +61,36 @@
             .catch(function(err) {
                 navigator.mediaDevices.getUserMedia({ video: true })
                     .then(function(stream) {
+                        const tracks = stream.getVideoTracks()[0]
+                        console.log(tracks)
                         VideoPlayer.srcObject = stream
                     })
                     .catch(function() {
                         alert('unable to stream camera')
+                        
                     })
-
             })
 
             // getsupportedconstriants
-            let supportedConstraints = navigator.mediaDevices.getSupportedConstraints();
-            console.log(supportedConstraints)
+            navigator.mediaDevices.enumerateDevices()
+                .then(res => {
+                    const videoSourcesArr = res.filter(function(item) {
+                        if(item.kind === 'videoinput') {
+                            return item
+                        }
+                    })
+                    console.log(videoSourcesArr)
+                    videoSourcesArr.map(item => {
+                        document.getElementById("info").insertAdjacentText("afterend", item.label)
+                    })
+                })
+                .catch()
+
+            // CaptureBtn.addEventListener('click', function(e) {
+            //     console.log('yes')
+            //     const context = Canvas.getContext('2d')
+            //     context.
+            // })
         }
 
         capture()
