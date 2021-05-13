@@ -11,110 +11,67 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <video id="video-player" autoplay></video>
-        <div id="option-box">
-            <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
-            <p id="instruction">Hover the above box<br/>over the console screen</p>
-            <div id="camera-footer">
-                <button type="button" id="capture-btn">
-                    <i class="fas fa-camera"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="painting">
-        <canvas id="canvas"></canvas>
-        <img id="photo"/>
-    </div>
+    <video id="video"></video>
+    <canvas id='grabFrameCanvas'></canvas>
+    <canvas id='takePhotoCanvas'></canvas>
+    <button type="button" id="getUserMedia" onclick="onGetUserMediaButtonClick();">Get User Media</button>
+    <button type="button" id="grabFrameButton" onclick="onGrabFrameButtonClick();">Frame Button</button>
+    <button type="button" id="takePhotoButton" onclick="onTakePhotoButtonClick();">Photo Button</button>
     <script>
-        const VideoPlayer = document.getElementById("video-player")
-        const CaptureBtn = document.getElementById("capture-btn")
-        const Canvas = document.getElementById("canvas")
-        const Photo = document.getElementById("photo")
-        const Wrapper = document.querySelector(".wrapper")
-        const Painting = document.querySelector(".painting")
+        var imageCapture;
 
-        Painting.style.display = 'none'
+        function onGetUserMediaButtonClick() {
+        navigator.mediaDevices.getUserMedia({video: true})
+        .then(mediaStream => {
+            document.querySelector('#video').srcObject = mediaStream;
 
-        function capture() {
-            if(!('mediaDevices' in navigator)) {
-            navigator.mediaDevices = {}
-        }
-
-        // for polyfilling
-        if(!('getUserMedia' in navigator.mediaDevices)) {
-            navigator.mediaDevices.getUserMedia = function(constraints) {
-            var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia
-
-                if(!getUserMedia) {
-                    return Promise.reject(new Error('getUserMedia is not implemented!'))
-                }
-
-                return new Promise(function(resolve, reject) {
-                    getUserMedia.call(navigator, constraints, resolve, reject)
-                })
-            }
-        }
-
-        // getting available input video sources and then showing stream
-        navigator.mediaDevices.enumerateDevices()
-            .then(function(res) {
-                const videoSourcesArr = res.filter(function(item) {
-                    if(item.kind === 'videoinput') {
-                        return { label: item.label, deviceId: item.deviceId }
-                    }
-                })
-                // console.log('camera options', videoSourcesArr)
-                const videoSource = videoSourcesArr.filter(item => {
-                    if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
-                        return item
-                    }
-                })
-                return videoSource[0]
+            const track = mediaStream.getVideoTracks()[0];
+            track.applyConstraints({
+                advanced: [{ exposureTime : 1000 }]
+                
             })
-            .then(function(result) {
-                console.log('deviceId', result)
-                navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
-                    .then(function(stream) {
-                        VideoPlayer.srcObject = stream
-                    })
-                    .catch(function(error) {
-                        console.log('unable to stream camera!')
-                    })
-            })
-            .catch(function(err) {
-                alert('unable to detect back camera!')
-                // fallback for laptop for testing purposes only
-                navigator.mediaDevices.getUserMedia({ video: true })
-                    .then(function(stream) {
-                        VideoPlayer.srcObject = stream
-                    })
-            })
-
-        }
-        
-        // is fired when streaming starts
-        VideoPlayer.addEventListener('canplay', function(event) {
-            console.log('video streaming now')
-            Canvas.setAttribute('width', 320)
-            Canvas.setAttribute('height', VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
+            console.log(track.getSettings())
+            imageCapture = new ImageCapture(track);
         })
+        .catch(error => console.log(error));
+        }
 
-        // for capturing photo
-        CaptureBtn.addEventListener('click', function(e) {
-            Wrapper.style.display = 'none'
-            Painting.style.display = 'block'
-            const drawingBoard = Canvas.getContext('2d')
-            drawingBoard.drawImage(VideoPlayer, 0, 0, Canvas.width, VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
-            
-            // stopping all video active streams
-            VideoPlayer.srcObject.getVideoTracks().forEach(function(track){
-                track.stop()
-            });
+        function onGrabFrameButtonClick() {
+        imageCapture.grabFrame()
+        .then(imageBitmap => {
+            const canvas = document.querySelector('#grabFrameCanvas');
+            drawCanvas(canvas, imageBitmap);
         })
+        .catch(error => console.log(error));
+        }
 
-        capture();
+        function onTakePhotoButtonClick() {
+        imageCapture.takePhoto()
+        .then(blob => createImageBitmap(blob))
+        .then(imageBitmap => {
+            const canvas = document.querySelector('#takePhotoCanvas');
+            drawCanvas(canvas, imageBitmap);
+        })
+        .catch(error => console.log(error));
+        }
+
+        /* Utils */
+
+        function drawCanvas(canvas, img) {
+        canvas.width = getComputedStyle(canvas).width.split('px')[0];
+        canvas.height = getComputedStyle(canvas).height.split('px')[0];
+        let ratio  = Math.min(canvas.width / img.width, canvas.height / img.height);
+        let x = (canvas.width - img.width * ratio) / 2;
+        let y = (canvas.height - img.height * ratio) / 2;
+        canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+        canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height,
+            x, y, img.width * ratio, img.height * ratio);
+        }
+
+        document.querySelector('video').addEventListener('play', function() {
+        document.querySelector('#grabFrameButton').disabled = false;
+        document.querySelector('#takePhotoButton').disabled = false;
+        });
     </script>
 </body>
 </html>
