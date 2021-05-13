@@ -27,7 +27,7 @@
 
             const track = mediaStream.getVideoTracks()[0];
             console.log('track', track)
-            track.applyConstraints({ advanced: [{ focusMode: "continous" }]})
+            track.applyConstraints({ focusMode: "continous" })
             .then(function() {
                 console.log('torch')
                 console.log(track.getSettings())
