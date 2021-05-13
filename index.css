@@ -10,15 +10,18 @@ body, html {
 
 .wrapper {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
     height: 100%;
     border: 2px red solid;
 }
 
 #video-player {
-    width: 100vw;
+    position: fixed;
+    top: 50%; left: 50%;
+    z-index: 1;
+    transform: translate(-60%, -50%);
 }
 
 #capture-btn {
