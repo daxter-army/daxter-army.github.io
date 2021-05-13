@@ -22,7 +22,8 @@
         const VideoPlayer = document.getElementById("video-player")
         // const CaptureBtn = document.getElementById("capture-btn")
 
-        if(!('mediaDevices' in navigator)) {
+        function capture() {
+            if(!('mediaDevices' in navigator)) {
             navigator.mediaDevices = {}
         }
 
@@ -41,13 +42,23 @@
             }
         }
 
-        navigator.mediaDevices.getUserMedia({ video: true })
+        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
             .then(function(stream) {
                 VideoPlayer.srcObject = stream
             })
             .catch(function(err) {
-                alert('cant open camera')
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function(stream) {
+                        VideoPlayer.srcObject = stream
+                    })
+                    .catch(function() {
+                        alert('unable to stream camera')
+                    })
+
             })
+        }
+
+        capture()
     </script>
 </body>
 </html>
