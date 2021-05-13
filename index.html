@@ -16,16 +16,17 @@
         <div id="option-box">
             <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
             <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
-            <canvas id="canvas"></canvas>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
                     <i class="fas fa-camera"></i>
                 </button>
             </div>
-            <h1 style="z-index: 3; color: white;" id="info"></h1>
+        </div>
+        <div class="render-image-area">
+            <!-- <canvas id="canvas"></canvas> -->
+            <!-- <img id="photo"/> -->
         </div>
     </div>
-    <img id="photo"/>
     <script>
         const VideoPlayer = document.getElementById("video-player")
         const CaptureBtn = document.getElementById("capture-btn")
@@ -71,9 +72,8 @@
         //             })
         //     })
 
-        function findDevices() {
             navigator.mediaDevices.enumerateDevices()
-                .then(res => {
+                .then(function(res) {
                     const videoSourcesArr = res.filter(function(item) {
                         if(item.kind === 'videoinput') {
                             return { label: item.label, deviceId: item.deviceId }
@@ -86,19 +86,20 @@
                         }
                     })
                 })
-                .catch(function(err) {
-                    alert('unable to detect back camera')
+                .then(function(result) {
+                    console.log('deviceId', result)
+                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
+                        .then(function(stream) {
+                            VideoPlayer.srcObject = stream
+                        })
+                        .catch(function(error) {
+                            console.log('unable to stream camera!')
+                        })
                 })
-        }
-        findDevices()
+                .catch(function(err) {
+                    alert('unable to detect back camera!')
+                })
 
-        navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: "1f0efec6cd6f0f00e9759422fc1af4c3e24135339a24262390c51af6b874612b" }}})
-            .then(function(stream) {
-                VideoPlayer.srcObject = stream;
-            })
-            .catch(function(error) {
-                console.log(error)
-            })
 
 
 
