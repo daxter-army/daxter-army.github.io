@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
-    <h1>try</h1>
+    <video id="video-player" autoplay></video>
+    <button type="button" id="capture-btn"><i class="fas fa-camera"></i></button>
+    <script>
+        const VideoPlayer = document.getElementById("video-player")
+        const CaptureBtn = document.getElementById("capture-btn")
+
+        if(!('mediaDevices' in navigator)) {
+            navigator.mediaDevices = {}
+        }
+
+        // for polyfilling
+        if(!('getUserMedia' in navigator.mediaDevices)) {
+            navigator.mediaDevices.getUserMedia = function(constraints) {
+            var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia
+
+                if(!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented!'))
+                }
+
+                return new Promise(function(resolve, reject) {
+                    getUserMedia.call(navigator, constraints, resolve, reject)
+                })
+            }
+        }
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                VideoPlayer.srcObject = stream
+            })
+            .catch(function(err) {
+                setFallback(true)
+            })
+    </script>
 </body>
 </html>
