@@ -54,37 +54,49 @@
         }
 
         // If back camera fails, then front camera kicks in
-        navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
-            .then(function(stream) {
-                VideoPlayer.srcObject = stream
-            })
-            .catch(function(err) {
-                navigator.mediaDevices.getUserMedia({ video: true })
-                    .then(function(stream) {
-                        const tracks = stream.getVideoTracks()[0]
-                        console.log(tracks)
-                        VideoPlayer.srcObject = stream
-                    })
-                    .catch(function() {
-                        alert('unable to stream camera')
+        // navigator.mediaDevices.getUserMedia({ video: { facingMode: { exact: "environment" } }})
+        //     .then(function(stream) {
+        //         VideoPlayer.srcObject = stream
+        //     })
+        //     .catch(function(err) {
+        //         navigator.mediaDevices.getUserMedia({ video: true })
+        //             .then(function(stream) {
+        //                 const tracks = stream.getVideoTracks()[0]
+        //                 console.log('tracks', tracks)
+        //                 VideoPlayer.srcObject = stream
+        //             })
+        //             .catch(function() {
+        //                 alert('unable to stream camera')
                         
-                    })
+        //             })
+        //     })
+
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function(stream) {
+                var videoTracks = stream.getVideoTracks();
+                // console.log('Got stream with constraints:', constraints);
+                console.log('Using video device: ' + videoTracks[0].label);
+                window.stream = stream; // make variable available to console
+                VideoPlayer.srcObject = stream;
+            })
+            .catch(function(error) {
+                console.log(error)
             })
 
             // getsupportedconstriants
-            navigator.mediaDevices.enumerateDevices()
-                .then(res => {
-                    const videoSourcesArr = res.filter(function(item) {
-                        if(item.kind === 'videoinput') {
-                            return item
-                        }
-                    })
-                    console.log(videoSourcesArr)
-                    videoSourcesArr.map(item => {
-                        document.getElementById("info").insertAdjacentText("afterend", item.label)
-                    })
-                })
-                .catch()
+            // navigator.mediaDevices.enumerateDevices()
+            //     .then(res => {
+            //         const videoSourcesArr = res.filter(function(item) {
+            //             if(item.kind === 'videoinput') {
+            //                 return item
+            //             }
+            //         })
+            //         console.log(videoSourcesArr)
+            //         videoSourcesArr.map(item => {
+            //             document.getElementById("info").insertAdjacentText("afterend", item.label)
+            //         })
+            //     })
+            //     .catch()
 
             // CaptureBtn.addEventListener('click', function(e) {
             //     console.log('yes')
@@ -93,7 +105,7 @@
             // })
         }
 
-        capture()
+        capture();
     </script>
 </body>
 </html>
