@@ -22,10 +22,10 @@
                 </button>
             </div>
         </div>
-        <div class="render-image-area">
-            <!-- <canvas id="canvas"></canvas> -->
-            <!-- <img id="photo"/> -->
-        </div>
+    </div>
+    <div class="painting">
+        <canvas id="canvas"></canvas>
+        <img id="photo"/>
     </div>
     <script>
         const VideoPlayer = document.getElementById("video-player")
@@ -33,6 +33,7 @@
         const Canvas = document.getElementById("canvas")
         const Photo = document.getElementById("photo")
         const Wrapper = document.querySelector(".wrapper")
+        const Painting = document.querySelector(".painting")
 
         function capture() {
             if(!('mediaDevices' in navigator)) {
@@ -55,42 +56,51 @@
         }
 
         // getting available input video sources and then showing stream
-            navigator.mediaDevices.enumerateDevices()
-                .then(function(res) {
-                    const videoSourcesArr = res.filter(function(item) {
-                        if(item.kind === 'videoinput') {
-                            return { label: item.label, deviceId: item.deviceId }
-                        }
+        navigator.mediaDevices.enumerateDevices()
+            .then(function(res) {
+                const videoSourcesArr = res.filter(function(item) {
+                    if(item.kind === 'videoinput') {
+                        return { label: item.label, deviceId: item.deviceId }
+                    }
+                })
+                // console.log('camera options', videoSourcesArr)
+                const videoSource = videoSourcesArr.filter(item => {
+                    if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
+                        return item
+                    }
+                })
+                return videoSource[0]
+            })
+            .then(function(result) {
+                console.log('deviceId', result)
+                navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
+                    .then(function(stream) {
+                        VideoPlayer.srcObject = stream
                     })
-                    // console.log('camera options', videoSourcesArr)
-                    const videoSource = videoSourcesArr.filter(item => {
-                        if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
-                            return item
-                        }
+                    .catch(function(error) {
+                        console.log('unable to stream camera!')
                     })
-                    return videoSource[0]
-                })
-                .then(function(result) {
-                    console.log('deviceId', result)
-                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
-                        .then(function(stream) {
-                            VideoPlayer.srcObject = stream
-                        })
-                        .catch(function(error) {
-                            console.log('unable to stream camera!')
-                        })
-                })
-                .catch(function(err) {
-                    alert('unable to detect back camera!')
-                })
+            })
+            .catch(function(err) {
+                alert('unable to detect back camera!')
+                // fallback for laptop for testing purposes only
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function(stream) {
+                        VideoPlayer.srcObject = stream
+                    })
+            })
 
-
-            // CaptureBtn.addEventListener('click', function(e) {
-            //     console.log('yes')
-            //     const context = Canvas.getContext('2d')
-            //     context.
-            // })
         }
+        
+        CaptureBtn.addEventListener('click', function(e) {
+            console.log('yes')
+            Wrapper.style.display = 'none'
+            const drawingBoard = Canvas.getContext('2d')
+            drawingBoard.drawImage(VideoPlayer, 0, 0, Canvas.width, VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
+            VideoPlayer.srcObject.getVideoTracks().forEach(function(track){
+                track.stop()
+            });
+        })
 
         capture();
     </script>
