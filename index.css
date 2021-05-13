@@ -30,10 +30,16 @@ body, html {
     height: 50px;
     width: 50px;
     border: none;
+    outline: none;
     border-radius: 50%;
 }
 
+#capture-btn:active {
+    background-color: #C0C0C0;
+}
+
 #target-box {
+    position: fixed;
     display: block;
     margin: auto;
     height: 300px;
@@ -63,5 +69,5 @@ body, html {
     left: 50%; */
     z-index: 2;
     /* transform: translate(-50%, -50%); */
-    border: 1px blue solid;
+    /* border: 1px blue solid; */
 }
