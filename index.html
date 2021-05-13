@@ -80,8 +80,11 @@
                         }
                     })
 
+                    console.log('camera options', videoSourcesArr)
+
                     const videoSource = videoSourcesArr.filter(item => {
                         if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
+                            console.log('from inner loop', item)
                             return item
                         }
                     })
