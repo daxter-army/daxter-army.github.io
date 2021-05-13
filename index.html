@@ -91,7 +91,7 @@
                 })
                 .then(function(result) {
                     console.log('deviceId', result)
-                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
+                    navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: "1f0efec6cd6f0f00e9759422fc1af4c3e24135339a24262390c51af6b874612b" }}})
                         .then(function(stream) {
                             VideoPlayer.srcObject = stream
                         })
