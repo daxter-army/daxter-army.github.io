@@ -77,6 +77,17 @@
                 console.log('deviceId', result)
                 navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
                     .then(function(stream) {
+                        const track = mediaStream.getVideoTracks()[0];
+                            console.log('track', track)
+                            track.applyConstraints({ focusMode: "continous" })
+                            .then(function() {
+                                console.log('torch')
+                                console.log(track.getSettings())
+                            })
+                            .catch(function(err) {
+                                console.log('from catch block')
+                                console.log(err)
+                            })
                         VideoPlayer.srcObject = stream
                     })
                     .catch(function(error) {
