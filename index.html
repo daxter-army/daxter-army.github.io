@@ -123,45 +123,45 @@
             // converting image, to send to server
             // picture = dataURItoBlob(Canvas.toDataURL())
             picture = Canvas.toDataURL()
-
+            
             let formData = new FormData()
             formData.append('image', picture)
-
+            
             // console.log("image values: ", picture)
-
+            
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
-
+            
             // const inputData = {
-            //     data: 'hello from client'
-            // }
-
-            console.log('STATUS:', 'CORS')
-            const request = new Request(url, {
-                method: "POST",
-                body: formData,
-                mode: 'cors',
-                headers: new Headers({
-                    'Content-Type': 'multipart/form-data',
-                    // 'Content-Type': 'application/json',
-                    'Access-Control-Allow-Methods': 'POST',
-                    'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+                //     data: 'hello from client'
+                // }
+                
+                const request = new Request(url, {
+                    method: "POST",
+                    body: formData,
+                    mode: 'cors',
+                    headers: new Headers({
+                        'Content-Type': 'multipart/form-data',
+                        // 'Content-Type': 'application/json',
+                        'Access-Control-Allow-Methods': 'POST',
+                        'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+                    })
+                })
+                
+                fetch(request)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    alert('SUCCESS!')
+                })
+                .catch((error) => {
+                    console.log(error)
+                    alert('ERROR!')
                 })
             })
-
-            fetch(request)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data)
-                alert('SUCCESS!')
-            })
-            .catch((error) => {
-                console.log(error)
-                alert('ERROR!')
-            })
-        })
-
-        // not being used
+            
+            console.log('STATUS:', 'CORS')
+            // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
             var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
