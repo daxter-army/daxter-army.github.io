@@ -77,7 +77,7 @@
             })
             .then(function(result) {
                 // console.log('deviceId', result)
-                navigator.mediaDevices.getUserMedia({ video: { width: 400, height: 400, deviceId: { exact: result.deviceId }}})
+                navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
@@ -104,7 +104,7 @@
         // is fired when streaming starts
         VideoPlayer.addEventListener('canplay', function(event) {
             console.log('video streaming now')
-            Canvas.setAttribute('width', 100)
+            Canvas.setAttribute('width', 200)
             Canvas.setAttribute('height', VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
         })
 
@@ -154,7 +154,7 @@
             })
         })
             
-        console.log('STATUS:', 'CHANGING DIMENSIONS 400x400')
+        console.log('STATUS:', 'CHANGING DIMENSIONS 200C')
         
         // not being used
         function dataURItoBlob(dataURI) {
