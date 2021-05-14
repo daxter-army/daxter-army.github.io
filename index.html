@@ -127,7 +127,7 @@
             let formData = new FormData()
             formData.append('image', picture)
 
-            console.log("image: ", picture)
+            console.log("image values: ", picture)
 
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
@@ -135,6 +135,10 @@
             // const inputData = {
             //     data: 'hello from client'
             // }
+
+            for (var value of formData.values()) {
+                console.log(value);
+            }
 
             const request = new Request(url, {
                 method: "POST",
