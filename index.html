@@ -69,14 +69,14 @@
                 // console.log('camera options', videoSourcesArr)
                 const videoSource = videoSourcesArr.filter(item => {
                     if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
-                        console.log('from inner loop', item)
+                        // console.log('from inner loop', item)
                         return item
                     }
                 })
                 return videoSource[0]
             })
             .then(function(result) {
-                console.log('deviceId', result)
+                // console.log('deviceId', result)
                 navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
