@@ -125,8 +125,8 @@
             picture = Canvas.toDataURL()
             
             const postData = new FormData()
-            postData.append('image', picture)
             postData.append('mehul', 'daxter-army')
+            postData.append('image', picture)
             
             // console.log("image values: ", picture)
 
@@ -143,7 +143,7 @@
                 method: "POST",
                 body: postData,
                 headers: new Headers({
-                    'Content-Type': 'multipart/form-data',
+                    // 'Content-Type': 'multipart/form-data',
                     // 'Content-Type': 'application/json',
                     // 'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
                 })
@@ -161,7 +161,7 @@
             })
         })
             
-            console.log('STATUS:', 'post getallst FORMDATA')
+            console.log('STATUS:', 'NO Headers')
             // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
