@@ -125,7 +125,7 @@
             picture = Canvas.toDataURL()
 
             let formData = new FormData()
-            formData.append('image', picture)
+            formData.append('image', picture.data)
 
             console.log("image: ", picture)
 
@@ -135,8 +135,6 @@
             // const inputData = {
             //     data: 'hello from client'
             // }
-
-            console.log('formData: ', formData.values())
 
             const request = new Request(url, {
                 method: "POST",
