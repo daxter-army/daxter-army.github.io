@@ -124,8 +124,8 @@
             // picture = dataURItoBlob(Canvas.toDataURL())
             picture = Canvas.toDataURL()
 
-            const postData = new FormData()
-            postData.append('image', picture)
+            let formData = new FormData()
+            formData.append('image', picture)
 
             console.log("image: ", picture)
 
@@ -136,11 +136,11 @@
             //     data: 'hello from client'
             // }
 
-            console.log('Postdata: ', postData)
+            console.log('formData: ', formData.values().image)
 
             const request = new Request(url, {
                 method: "POST",
-                body: postData,
+                body: formData,
                 headers: new Headers({
                     'Content-Type': 'multipart/form-data',
                     // 'Content-Type': 'application/json',
