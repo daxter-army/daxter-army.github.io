@@ -125,9 +125,9 @@
             picture = Canvas.toDataURL()
 
             let formData = new FormData()
-            formData.append('image', picture)
+            formData.append('image', picture.data)
 
-            console.log("image: ", picture.data)
+            console.log("image.datanow: ", picture.data)
 
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
