@@ -136,9 +136,11 @@
             //     data: 'hello from client'
             // }
 
+            console.log('STATUS:', 'CORS')
             const request = new Request(url, {
                 method: "POST",
                 body: formData,
+                mode: 'cors',
                 headers: new Headers({
                     'Content-Type': 'multipart/form-data',
                     // 'Content-Type': 'application/json',
