@@ -126,6 +126,7 @@
             
             let postData = new FormData()
             postData.append('image', picture)
+            postData.append('mehul', 'daxter-army')
             
             // console.log("image values: ", picture)
             
@@ -158,7 +159,7 @@
             })
         })
             
-            console.log('STATUS:', 'FORMDATA')
+            console.log('STATUS:', 'New FORMDATA')
             // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
