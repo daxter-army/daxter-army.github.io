@@ -77,11 +77,11 @@
             })
             .then(function(result) {
                 // console.log('deviceId', result)
-                navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
+                navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, deviceId: { exact: result.deviceId }}})
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
-                            track.applyConstraints({ width: 400, height: 400, advanced: [{ exposureCompensation: -0.5 }] })
+                            track.applyConstraints({ advanced: [{ exposureCompensation: -0.5 }] })
                             .then(function() {
                                 console.log(track.getSettings())
                             })
@@ -154,7 +154,7 @@
             })
         })
             
-        console.log('STATUS:', 'CHANGING DIMENSIONS')
+        console.log('STATUS:', 'CHANGING DIMENSIONS 2')
         
         // not being used
         function dataURItoBlob(dataURI) {
