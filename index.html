@@ -128,15 +128,9 @@
             postData.append('image', picture)
             
             // console.log("image values: ", picture)
-
-            console.log('getalldata' ,postData.getAll('image'))
             
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
-            
-            // const inputData = {
-            //     data: 'hello from client'
-            // }
                 
             const request = new Request(url, {
                 method: "POST",
@@ -160,8 +154,9 @@
             })
         })
             
-            console.log('STATUS:', 'WITH FORM_DATA Headers')
-            // not being used
+        console.log('STATUS:', 'WITH FORM_DATA Headers')
+        
+        // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
             var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
