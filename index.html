@@ -81,7 +81,7 @@
                     .then(function(stream) {
                         const track = stream.getVideoTracks()[0];
                             console.log('track', track)
-                            track.applyConstraints({ focusMode: "manual", advanced: [{ exposureCompensation: -0.5 }] })
+                            track.applyConstraints({ advanced: [{ exposureCompensation: -0.5 }] })
                             .then(function() {
                                 console.log(track.getSettings())
                             })
@@ -129,7 +129,7 @@
 
             console.log("image: ", picture)
 
-            const url = 'https://0e85d50694e8.ngrok.io/runInfluence'
+            const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
 
             // const inputData = {
@@ -158,7 +158,7 @@
             })
         })
 
-        
+        // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
             var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
