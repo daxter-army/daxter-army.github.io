@@ -124,7 +124,7 @@
             // picture = dataURItoBlob(Canvas.toDataURL())
             picture = Canvas.toDataURL()
             
-            let postData = new FormData()
+            const postData = new FormData()
             postData.append('image', picture)
             postData.append('mehul', 'daxter-army')
             
@@ -133,9 +133,9 @@
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
             
-            const inputData = {
-                data: 'hello from client'
-            }
+            // const inputData = {
+            //     data: 'hello from client'
+            // }
                 
             const request = new Request(url, {
                 method: "POST",
@@ -159,7 +159,7 @@
             })
         })
             
-            console.log('STATUS:', 'New FORMDATA')
+            console.log('STATUS:', 'CONst FORMDATA')
             // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
