@@ -12,9 +12,6 @@
 </head>
 <body>
     <div class="wrapper">
-    <h1>testing api</h1>
-    <input type="text" id="fname" name="fname" value="http://0e85d50694e8.ngrok.io/runInfluence" placeholder="url"/>
-    <button onclick="send();">send</button>
         <!-- <video id="video-player" autoplay></video> -->
         <!-- <div id="option-box"> -->
             <!-- <img id="target-box" src='./rim_slimmed_max_dots_min.svg' /> -->
@@ -159,35 +156,31 @@
         //     return blob;
         // }
 
-        const urlInput = document.getElementById('fname')
-
-        function send() {
-            const url = urlInput.value
-            console.log('sending req to: ', url)
-            const inputData = {
-                data: 'hello from client'
-            }
-
-            const request = new Request(url, {
-                method: "POST",
-                body: (JSON.stringify(inputData)),
-                headers: new Headers({
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
-                })
-            })
-
-            fetch(request)
-            .then((response) => response.json())
-            .then((data) => {
-                console.log(data)
-                alert('SUCCESS!')
-            })
-            .catch((error) => {
-                console.log(error)
-                alert('ERROR!')
-            })
+        const url = 'https://0e85d50694e8.ngrok.io/runInfluence'
+        console.log('sending req to: ', url)
+        const inputData = {
+            data: 'hello from client'
         }
+
+        const request = new Request(url, {
+            method: "POST",
+            body: (JSON.stringify(inputData)),
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+            })
+        })
+
+        fetch(request)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data)
+            alert('SUCCESS!')
+        })
+        .catch((error) => {
+            console.log(error)
+            alert('ERROR!')
+        })
     </script>
 </body>
 </html>
