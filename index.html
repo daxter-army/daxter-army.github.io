@@ -12,175 +12,165 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- <video id="video-player" autoplay></video> -->
-        <!-- <div id="option-box"> -->
+        <video id="video-player" autoplay></video>
+        <div id="option-box">
             <!-- <img id="target-box" src='./rim_slimmed_max_dots_min.svg' /> -->
-            <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
-            <!-- <div id="camera-footer"> -->
-                <!-- <button type="button" id="capture-btn"> -->
-                    <!-- <i class="fas fa-camera"></i> -->
-                <!-- </button> -->
-            <!-- </div> -->
-        <!-- </div> -->
+            <p id="instruction">Hover the above box<br/>over the console screen</p>
+            <div id="camera-footer">
+                <button type="button" id="capture-btn">
+                    <i class="fas fa-camera"></i>
+                </button>
+            </div>
+        </div>
     </div>
-    <!-- <div class="painting">
+    <div class="painting">
         <canvas id="canvas"></canvas>
         <img id="photo"/>
-    </div> -->
+    </div>
     <script>
-        // const VideoPlayer = document.getElementById("video-player")
-        // const CaptureBtn = document.getElementById("capture-btn")
-        // const Canvas = document.getElementById("canvas")
-        // const Photo = document.getElementById("photo")
-        // const Wrapper = document.querySelector(".wrapper")
-        // const Painting = document.querySelector(".painting")
-        // var picture
+        const VideoPlayer = document.getElementById("video-player")
+        const CaptureBtn = document.getElementById("capture-btn")
+        const Canvas = document.getElementById("canvas")
+        const Photo = document.getElementById("photo")
+        const Wrapper = document.querySelector(".wrapper")
+        const Painting = document.querySelector(".painting")
+        var picture
 
-        // Painting.style.display = 'none'
+        Painting.style.display = 'none'
 
-        // function capture() {
-        //     if(!('mediaDevices' in navigator)) {
-        //     navigator.mediaDevices = {}
-        // }
-
-        // // for polyfilling
-        // if(!('getUserMedia' in navigator.mediaDevices)) {
-        //     navigator.mediaDevices.getUserMedia = function(constraints) {
-        //     var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia
-
-        //         if(!getUserMedia) {
-        //             return Promise.reject(new Error('getUserMedia is not implemented!'))
-        //         }
-
-        //         return new Promise(function(resolve, reject) {
-        //             getUserMedia.call(navigator, constraints, resolve, reject)
-        //         })
-        //     }
-        // }
-
-        // // getting available input video sources and then showing stream
-        // navigator.mediaDevices.enumerateDevices()
-        //     .then(function(res) {
-        //         const videoSourcesArr = res.filter(function(item) {
-        //             if(item.kind === 'videoinput') {
-        //                 return { label: item.label, deviceId: item.deviceId }
-        //             }
-        //         })
-        //         // console.log('camera options', videoSourcesArr)
-        //         const videoSource = videoSourcesArr.filter(item => {
-        //             if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
-        //                 console.log('from inner loop', item)
-        //                 return item
-        //             }
-        //         })
-        //         return videoSource[0]
-        //     })
-        //     .then(function(result) {
-        //         console.log('deviceId', result)
-        //         navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
-        //             .then(function(stream) {
-        //                 const track = stream.getVideoTracks()[0];
-        //                     console.log('track', track)
-        //                     track.applyConstraints({ focusMode: "manual", advanced: [{ exposureCompensation: -0.5 }] })
-        //                     .then(function() {
-        //                         console.log(track.getSettings())
-        //                     })
-        //                     .catch(function(err) {
-        //                         console.log('from catch block')
-        //                         console.log(err)
-        //                     })
-        //                 VideoPlayer.srcObject = stream
-        //             })
-        //             .catch(function(error) {
-        //                 console.log('unable to stream camera!')
-        //             })
-        //     })
-        //     .catch(function(err) {
-        //         alert('unable to detect back camera!')
-        //         // fallback for laptop for testing purposes only
-        //     })
-        // }
-        
-        // // is fired when streaming starts
-        // VideoPlayer.addEventListener('canplay', function(event) {
-        //     console.log('video streaming now')
-        //     Canvas.setAttribute('width', 320)
-        //     Canvas.setAttribute('height', VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
-        // })
-
-        // // for capturing photo
-        // CaptureBtn.addEventListener('click', function(e) {
-        //     Wrapper.style.display = 'none'
-        //     Painting.style.display = 'block'
-        //     const drawingBoard = Canvas.getContext('2d')
-        //     drawingBoard.drawImage(VideoPlayer, 0, 0, Canvas.width, VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
-            
-        //     // stopping all video active streams
-        //     VideoPlayer.srcObject.getVideoTracks().forEach(function(track){
-        //         track.stop()
-        //     })
-
-        //     // converting image, to send to server
-        //     picture = dataURItoBlob(Canvas.toDataURL())
-
-        //     const postData = new FormData()
-        //     postData.append('file', picture)
-
-        //     fetch('http://localhost:5000/serve', {
-        //         method: 'POST',
-        //         body: {'test': 'okay'},
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }
-        //     })
-        //     .then(function(res) {
-        //         console.log(res)
-        //     })
-        //     .catch(function(err) {
-        //         console.log('error ocurred!')
-        //         console.error(err)
-        //     })
-        // })
-
-        // capture();
-
-        // function dataURItoBlob(dataURI) {
-        //     var byteString = atob(dataURI.split(',')[1]);
-        //     var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
-        //     var ab = new ArrayBuffer(byteString.length);
-        //     var ia = new Uint8Array(ab);
-        //     for (var i = 0; i < byteString.length; i++) {
-        //         ia[i] = byteString.charCodeAt(i);
-        //     }
-        //     var blob = new Blob([ab], {type: mimeString});
-        //     return blob;
-        // }
-
-        const url = 'https://0e85d50694e8.ngrok.io/runInfluence'
-        console.log('sending req to: ', url)
-        const inputData = {
-            data: 'hello from client'
+        function capture() {
+            if(!('mediaDevices' in navigator)) {
+            navigator.mediaDevices = {}
         }
 
-        const request = new Request(url, {
-            method: "POST",
-            body: (JSON.stringify(inputData)),
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+        // for polyfilling
+        if(!('getUserMedia' in navigator.mediaDevices)) {
+            navigator.mediaDevices.getUserMedia = function(constraints) {
+            var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia
+
+                if(!getUserMedia) {
+                    return Promise.reject(new Error('getUserMedia is not implemented!'))
+                }
+
+                return new Promise(function(resolve, reject) {
+                    getUserMedia.call(navigator, constraints, resolve, reject)
+                })
+            }
+        }
+
+        // getting available input video sources and then showing stream
+        navigator.mediaDevices.enumerateDevices()
+            .then(function(res) {
+                const videoSourcesArr = res.filter(function(item) {
+                    if(item.kind === 'videoinput') {
+                        return { label: item.label, deviceId: item.deviceId }
+                    }
+                })
+                // console.log('camera options', videoSourcesArr)
+                const videoSource = videoSourcesArr.filter(item => {
+                    if(item.label.toLowerCase().includes('camera') && item.label.includes('facing back') && item.label.includes('0')) {
+                        console.log('from inner loop', item)
+                        return item
+                    }
+                })
+                return videoSource[0]
+            })
+            .then(function(result) {
+                console.log('deviceId', result)
+                navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
+                    .then(function(stream) {
+                        const track = stream.getVideoTracks()[0];
+                            console.log('track', track)
+                            track.applyConstraints({ focusMode: "manual", advanced: [{ exposureCompensation: -0.5 }] })
+                            .then(function() {
+                                console.log(track.getSettings())
+                            })
+                            .catch(function(err) {
+                                console.log('from catch block')
+                                console.log(err)
+                            })
+                        VideoPlayer.srcObject = stream
+                    })
+                    .catch(function(error) {
+                        console.log('unable to stream camera!')
+                    })
+            })
+            .catch(function(err) {
+                alert('unable to detect back camera!')
+                // fallback for laptop for testing purposes only
+            })
+        }
+        
+        // is fired when streaming starts
+        VideoPlayer.addEventListener('canplay', function(event) {
+            console.log('video streaming now')
+            Canvas.setAttribute('width', 320)
+            Canvas.setAttribute('height', VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
+        })
+
+        // for capturing photo
+        CaptureBtn.addEventListener('click', function(e) {
+            // Wrapper.style.display = 'none'
+            // Painting.style.display = 'block'
+            const drawingBoard = Canvas.getContext('2d')
+            drawingBoard.drawImage(VideoPlayer, 0, 0, Canvas.width, VideoPlayer.videoHeight/(VideoPlayer.videoWidth/Canvas.width))
+            
+            // stopping all video active streams
+            // VideoPlayer.srcObject.getVideoTracks().forEach(function(track){
+            //     track.stop()
+            // })
+
+            // converting image, to send to server
+            picture = dataURItoBlob(Canvas.toDataURL())
+
+            const postData = new FormData()
+            postData.append('image', picture)
+
+            console.log("Image: ", picture)
+
+            const url = 'https://0e85d50694e8.ngrok.io/runInfluence'
+            console.log('Sending req to: ', url)
+
+            // const inputData = {
+            //     data: 'hello from client'
+            // }
+
+            const request = new Request(url, {
+                method: "POST",
+                body: postData,
+                headers: new Headers({
+                    'Content-Type': 'multipart/form-data',
+                    'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+                })
+            })
+
+            fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+                alert('SUCCESS!')
+            })
+            .catch((error) => {
+                console.log(error)
+                alert('ERROR!')
             })
         })
 
-        fetch(request)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-            alert('SUCCESS!')
-        })
-        .catch((error) => {
-            console.log(error)
-            alert('ERROR!')
-        })
+        
+        function dataURItoBlob(dataURI) {
+            var byteString = atob(dataURI.split(',')[1]);
+            var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+            var ab = new ArrayBuffer(byteString.length);
+            var ia = new Uint8Array(ab);
+            for (var i = 0; i < byteString.length; i++) {
+                ia[i] = byteString.charCodeAt(i);
+            }
+            var blob = new Blob([ab], {type: mimeString});
+            return blob;
+        }
+
+        // starting the camera
+        capture()
     </script>
 </body>
 </html>
