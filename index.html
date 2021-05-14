@@ -128,7 +128,7 @@
             formData.append('image', picture)
 
             // console.log("image values: ", picture)
-
+            console.log('type',typeof(picture))
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
 
@@ -136,16 +136,13 @@
             //     data: 'hello from client'
             // }
 
-            for (var value of formData.values()) {
-                console.log(value);
-            }
-
             const request = new Request(url, {
                 method: "POST",
                 body: formData,
                 headers: new Headers({
                     'Content-Type': 'multipart/form-data',
                     // 'Content-Type': 'application/json',
+                    'Access-Control-Allow-Methods': 'POST',
                     'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
                 })
             })
