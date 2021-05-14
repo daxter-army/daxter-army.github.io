@@ -13,21 +13,23 @@
 <body>
     <div class="wrapper">
     <h1>testing api</h1>
-        <video id="video-player" autoplay></video>
-        <div id="option-box">
+    <input type="text" id="fname" name="fname">
+    <button onclick="send();">send</button>
+        <!-- <video id="video-player" autoplay></video> -->
+        <!-- <div id="option-box"> -->
             <!-- <img id="target-box" src='./rim_slimmed_max_dots_min.svg' /> -->
-            <p id="instruction">Hover the above box<br/>over the console screen</p>
-            <div id="camera-footer">
-                <button type="button" id="capture-btn">
-                    <i class="fas fa-camera"></i>
-                </button>
-            </div>
-        </div>
+            <!-- <p id="instruction">Hover the above box<br/>over the console screen</p> -->
+            <!-- <div id="camera-footer"> -->
+                <!-- <button type="button" id="capture-btn"> -->
+                    <!-- <i class="fas fa-camera"></i> -->
+                <!-- </button> -->
+            <!-- </div> -->
+        <!-- </div> -->
     </div>
-    <div class="painting">
+    <!-- <div class="painting">
         <canvas id="canvas"></canvas>
         <img id="photo"/>
-    </div>
+    </div> -->
     <script>
         // const VideoPlayer = document.getElementById("video-player")
         // const CaptureBtn = document.getElementById("capture-btn")
@@ -157,28 +159,33 @@
         //     return blob;
         // }
 
-        const url='https://0e85d50694e8.ngrok.io/runInfluence'
-        console.log('sending req to: ', url)
-        const inputData = {
-            data: 'hello from client'
-        }
+        const urlInput = document.getElementById('fname')
 
-        const request = new Request(url, {
-            method: "POST",
-            body: (JSON.stringify(inputData)),
-            headers: new Headers({
-                'Content-Type': 'application/json'
+        function send() {
+            const url = urlInput.value
+            console.log('sending req to: ', url)
+            const inputData = {
+                data: 'hello from client'
+            }
+
+            const request = new Request(url, {
+                method: "POST",
+                body: (JSON.stringify(inputData)),
+                headers: new Headers({
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+                })
             })
-        })
 
-        fetch(request)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+            fetch(request)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
+        }
     </script>
 </body>
 </html>
