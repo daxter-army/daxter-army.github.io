@@ -129,6 +129,8 @@
             postData.append('mehul', 'daxter-army')
             
             // console.log("image values: ", picture)
+
+            console.log('getalldata' ,postData.getAll('image'))
             
             const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
             console.log('Sending req to: ', url)
@@ -159,7 +161,7 @@
             })
         })
             
-            console.log('STATUS:', 'CONst FORMDATA')
+            console.log('STATUS:', 'post getallst FORMDATA')
             // not being used
         function dataURItoBlob(dataURI) {
             var byteString = atob(dataURI.split(',')[1]);
