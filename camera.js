@@ -14,7 +14,7 @@ var platform = detect.parse(navigator.userAgent)
 // Painting.style.display = 'none'
 
 console.log('name: ', platform.os.family.toLowerCase())
-console.log('STATUS:', 'Browser name')
+console.log('STATUS:', 'Testing Firefox')
 
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
@@ -56,9 +56,11 @@ function capture() {
             const videoSource = videoSourcesArr.filter(item => {
                 // selecting camera preferences on the basis of device and browser
                 if(platform.browser.family.toLowerCase().includes('chrome') || platform.browser.family.toLowerCase().includes('firefox') || platform.browser.family.toLowerCase().includes('mozilla')) {
+                    alert('confirmation for firefox only')
                     if(item.label.toLowerCase().includes('camera') && item.label.toLowerCase().includes('facing back') && item.label.includes('0')) {
-                        console.log('from inner loop', item)
-                        console.log('chrome or firefox')
+                        // console.log('from inner loop', item)
+                        alert('camera should be selected')
+                        console.log('Chrome or Firefox!')
                         return item
                     }
                 }
@@ -67,7 +69,7 @@ function capture() {
         })
         .then(function(result) {
             // console.log('deviceId', result.deviceId)
-            alert(result.deviceId)
+            // alert(result.deviceId)
             navigator.mediaDevices.getUserMedia({ video: { deviceId: { exact: result.deviceId }}})
                 .then(function(stream) {
                     const track = stream.getVideoTracks()[0];
