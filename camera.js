@@ -13,7 +13,8 @@ var platform = detect.parse(navigator.userAgent)
 
 // Painting.style.display = 'none'
 
-console.log('family', platform.browser.family.toLowerCase())
+console.log('name: ', platform.os.family.toLowerCase())
+console.log('STATUS:', 'Browser name')
 
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
@@ -32,7 +33,7 @@ if(!('getUserMedia' in navigator.mediaDevices)) {
 
 function capture() {
     // Detecting Laptops/PCs
-    if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows') {
+    if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows' || platform.os.family.toLowerCase() === 'ubuntu') {
         // Prompting to go to Mobile devices
         CameraUI.style.display = 'none'
         FallbackUI.style.display = 'block'
@@ -54,7 +55,7 @@ function capture() {
             // console.log('camera options', videoSourcesArr)
             const videoSource = videoSourcesArr.filter(item => {
                 // selecting camera preferences on the basis of device and browser
-                if(platform.browser.family.toLowerCase() === 'chrome' || platform.browser.family.toLowerCase() === 'firefox') {
+                if(platform.browser.family.toLowerCase().includes('chrome') || platform.browser.family.toLowerCase().includes('firefox') || platform.browser.family.toLowerCase().includes('mozilla')) {
                     if(item.label.toLowerCase().includes('camera') && item.label.toLowerCase().includes('facing back') && item.label.includes('0')) {
                         console.log('from inner loop', item)
                         console.log('chrome or firefox')
@@ -143,8 +144,6 @@ CaptureBtn.addEventListener('click', function(e) {
         alert('ERROR!')
     })
 })
-    
-console.log('STATUS:', 'MAX Touch POINTS CHANGING DIMENSIONS 200C')
 
 // not being used
 function dataURItoBlob(dataURI) {
