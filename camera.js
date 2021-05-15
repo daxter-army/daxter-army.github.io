@@ -115,7 +115,7 @@ CaptureBtn.addEventListener('click', function(e) {
     
     // console.log("image values: ", picture)
     
-    const url = 'https://63066fbadf8a.ngrok.io/runInfluence'
+    const url = 'https://fa3f78ca826c.ngrok.io/runInfluence'
     console.log('Sending req to: ', url)
         
     const request = new Request(url, {
