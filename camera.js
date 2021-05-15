@@ -14,7 +14,7 @@ var platform = detect.parse(navigator.userAgent)
 // Painting.style.display = 'none'
 
 console.log('name: ', platform.os.family.toLowerCase())
-console.log('STATUS:', 'WITH NEW SETTINGS')
+console.log('STATUS:', 'MOD CORS')
 
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
@@ -120,6 +120,7 @@ CaptureBtn.addEventListener('click', function(e) {
     const request = new Request(url, {
         method: "POST",
         body: postData,
+        mode: 'cors',
         headers: new Headers({
             // 'Content-Type': 'multipart/form-data',
             // 'Content-Type': 'application/json',
