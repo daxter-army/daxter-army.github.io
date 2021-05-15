@@ -40,8 +40,6 @@ function capture() {
     navigator.mediaDevices.enumerateDevices()
         .then(function(res) {
             const videoSourcesArr = res.filter(function(item) {
-                alert('inside camera')
-                console.log(item)
                 if(item.kind === 'videoinput') {
                     return { label: item.label, deviceId: item.deviceId }
                 }
