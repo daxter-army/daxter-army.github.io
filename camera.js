@@ -45,14 +45,14 @@ function capture() {
                     return { label: item.label, deviceId: item.deviceId }
                 }
             })
-            // console.log('camera options', videoSourcesArr)
+            console.log('camera options', videoSourcesArr)
             const videoSource = videoSourcesArr.filter(item => {
                 // selecting camera preferences on the basis of device and browser
                 if(platform.browser.family.toLowerCase().includes('chrome') || platform.browser.family.toLowerCase().includes('firefox') || platform.browser.family.toLowerCase().includes('mozilla')) {
-                    alert('confirmation for firefox only')
+                    console.log('confirmation for firefox only')
                     if(item.label.toLowerCase().includes('camera') && item.label.toLowerCase().includes('facing back') && item.label.includes('0')) {
                         // console.log('from inner loop', item)
-                        alert('camera should be selected')
+                        console.log('camera should be selected')
                         console.log('Chrome or Firefox!')
                         return item
                     }
