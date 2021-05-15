@@ -16,6 +16,14 @@ var platform = detect.parse(navigator.userAgent)
 console.log('name: ', platform.os.family.toLowerCase())
 console.log('STATUS:', 'Testing Firefox')
 
+// Detecting Laptops/PCs
+if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows' || platform.os.family.toLowerCase() === 'ubuntu') {
+    // Prompting to go to Mobile devices
+    CameraUI.style.display = 'none'
+    FallbackUI.style.display = 'block'
+    return alert('This works best on your mobile')
+}
+
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
     navigator.mediaDevices.getUserMedia = function(constraints) {
@@ -32,14 +40,6 @@ if(!('getUserMedia' in navigator.mediaDevices)) {
 }
 
 function capture() {
-    // Detecting Laptops/PCs
-    if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows' || platform.os.family.toLowerCase() === 'ubuntu') {
-        // Prompting to go to Mobile devices
-        CameraUI.style.display = 'none'
-        FallbackUI.style.display = 'block'
-        return alert('This works best on your mobile')
-    }
-    
     if(!('mediaDevices' in navigator)) {
         navigator.mediaDevices = {}
     }
@@ -48,6 +48,7 @@ function capture() {
     navigator.mediaDevices.enumerateDevices()
         .then(function(res) {
             const videoSourcesArr = res.filter(function(item) {
+                alert(item.kind)
                 if(item.kind === 'videoinput') {
                     return { label: item.label, deviceId: item.deviceId }
                 }
