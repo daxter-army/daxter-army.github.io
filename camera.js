@@ -13,6 +13,8 @@ var platform = detect.parse(navigator.userAgent)
 
 // Painting.style.display = 'none'
 
+console.log('family', platform.browser.family.toLowerCase())
+
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
     navigator.mediaDevices.getUserMedia = function(constraints) {
@@ -44,7 +46,6 @@ function capture() {
     // getting available input video sources and then showing stream
     navigator.mediaDevices.enumerateDevices()
         .then(function(res) {
-            alert('here')
             const videoSourcesArr = res.filter(function(item) {
                 if(item.kind === 'videoinput') {
                     return { label: item.label, deviceId: item.deviceId }
@@ -55,7 +56,7 @@ function capture() {
                 // selecting camera preferences on the basis of device and browser
                 if(platform.browser.family.toLowerCase() === 'chrome' || platform.browser.family.toLowerCase() === 'firefox') {
                     if(item.label.toLowerCase().includes('camera') && item.label.toLowerCase().includes('facing back') && item.label.includes('0')) {
-                        // console.log('from inner loop', item)
+                        console.log('from inner loop', item)
                         console.log('chrome or firefox')
                         return item
                     }
