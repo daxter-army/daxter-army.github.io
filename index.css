@@ -20,7 +20,6 @@ body, html {
     left: 50%;
     z-index: 1;
     transform: translate(-55%, -50%);
-    /* border: 1px red solid; */
 }
 
 #capture-btn {
@@ -83,5 +82,14 @@ body, html {
 
 #canvas {
     /* height: 100vh; */
+    display: none;
     border: 1px red solid;
+}
+
+#fallback-ui {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, -50%);
 }
