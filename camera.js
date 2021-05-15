@@ -123,7 +123,7 @@ CaptureBtn.addEventListener('click', function(e) {
         headers: new Headers({
             // 'Content-Type': 'multipart/form-data',
             // 'Content-Type': 'application/json',
-            // 'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
+            'Access-Control-Allow-Origin': 'https://daxter-army.github.io'
         })
     })
     
