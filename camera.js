@@ -16,14 +16,6 @@ var platform = detect.parse(navigator.userAgent)
 console.log('name: ', platform.os.family.toLowerCase())
 console.log('STATUS:', 'Testing Firefox')
 
-// Detecting Laptops/PCs
-if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows' || platform.os.family.toLowerCase() === 'ubuntu') {
-    // Prompting to go to Mobile devices
-    CameraUI.style.display = 'none'
-    FallbackUI.style.display = 'block'
-    return alert('This works best on your mobile')
-}
-
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
     navigator.mediaDevices.getUserMedia = function(constraints) {
@@ -161,5 +153,15 @@ function dataURItoBlob(dataURI) {
     return blob;
 }
 
-// starting the camera
-capture()
+// Detecting Laptops/PCs
+function checkPlatform(){
+    if(platform.os.family.toLowerCase() === 'linux' || platform.os.family.toLowerCase() === 'windows' || platform.os.family.toLowerCase() === 'ubuntu') {
+        // Prompting to go to Mobile devices
+        CameraUI.style.display = 'none'
+        FallbackUI.style.display = 'block'
+        return alert('This works best on your mobile')
+    }
+    // starting the camera
+    capture()
+}
+checkPlatform()
