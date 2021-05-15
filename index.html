@@ -150,11 +150,12 @@
             })
             .catch((error) => {
                 console.log(error)
-                alert('ERROR!', navigator.maxTouchPoints)
+                alert('ERROR!')
             })
         })
             
         console.log('STATUS:', 'MAX Touch POINTS CHANGING DIMENSIONS 200C')
+        alert(navigator.maxTouchPoints)
 
         function getBrowserAndPlatform() {
 
