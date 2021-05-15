@@ -44,9 +44,9 @@ body, html {
 #target-box {
     display: block;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 8%;
     /* height: 400px; */
-    width: 220px;
+    width: 55%;
     /* border: 2px red solid; */
 }
 
@@ -59,7 +59,7 @@ body, html {
 #camera-footer {
     position: fixed;
     left: 0;
-    bottom: 25px;
+    bottom: 5%;
     width: 100%;
     background-color: transparent;
     /* border: 1px yellow solid; */

@@ -14,7 +14,7 @@
     <div class="wrapper">
         <video id="video-player" autoplay></video>
         <div id="option-box">
-            <!-- <img id="target-box" src='./rim_slimmed_max_dots_min.svg' /> -->
+            <img id="target-box" src='./rim_slimmed_max_dots_min.svg' />
             <p id="instruction">Hover the above box<br/>over the console screen</p>
             <div id="camera-footer">
                 <button type="button" id="capture-btn">
@@ -146,7 +146,7 @@
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                alert('SUCCESS!')
+                alert('SUCCESS!', navigator.maxTouchPoints)
             })
             .catch((error) => {
                 console.log(error)
@@ -154,7 +154,7 @@
             })
         })
             
-        console.log('STATUS:', 'CHANGING DIMENSIONS 200C')
+        console.log('STATUS:', 'MAX Touch POINTS CHANGING DIMENSIONS 200C')
         
         // not being used
         function dataURItoBlob(dataURI) {
