@@ -14,7 +14,7 @@ var platform = detect.parse(navigator.userAgent)
 // Painting.style.display = 'none'
 
 console.log('name: ', platform.os.family.toLowerCase())
-console.log('STATUS:', 'Testing Firefox')
+console.log('STATUS:', 'Testing Firefox, checking labels')
 
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
@@ -40,7 +40,7 @@ function capture() {
     navigator.mediaDevices.enumerateDevices()
         .then(function(res) {
             const videoSourcesArr = res.filter(function(item) {
-                alert(item.kind)
+                alert(item.label)
                 if(item.kind === 'videoinput') {
                     return { label: item.label, deviceId: item.deviceId }
                 }
