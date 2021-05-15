@@ -146,15 +146,19 @@
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
-                alert('SUCCESS!', navigator.maxTouchPoints)
+                alert('SUCCESS!')
             })
             .catch((error) => {
                 console.log(error)
-                alert('ERROR!')
+                alert('ERROR!', navigator.maxTouchPoints)
             })
         })
             
         console.log('STATUS:', 'MAX Touch POINTS CHANGING DIMENSIONS 200C')
+
+        function getBrowserAndPlatform() {
+
+        }
         
         // not being used
         function dataURItoBlob(dataURI) {
