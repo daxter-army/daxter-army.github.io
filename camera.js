@@ -14,7 +14,7 @@ var platform = detect.parse(navigator.userAgent)
 // Painting.style.display = 'none'
 
 console.log('name: ', platform.os.family.toLowerCase())
-console.log('STATUS:', 'Testing Firefox, checking labels')
+console.log('STATUS:', 'WITH NEW SETTINGS')
 
 // for polyfilling
 if(!('getUserMedia' in navigator.mediaDevices)) {
@@ -114,7 +114,7 @@ CaptureBtn.addEventListener('click', function(e) {
     
     // console.log("image values: ", picture)
     
-    const url = 'https://fa3f78ca826c.ngrok.io/runInfluence'
+    const url = 'https://8da2cc330067.ngrok.io/runInfluence'
     console.log('Sending req to: ', url)
         
     const request = new Request(url, {
