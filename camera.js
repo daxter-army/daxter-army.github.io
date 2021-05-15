@@ -40,7 +40,7 @@ function capture() {
     navigator.mediaDevices.enumerateDevices()
         .then(function(res) {
             const videoSourcesArr = res.filter(function(item) {
-                alert(item.label)
+                alert('label =>' ,item.label)
                 if(item.kind === 'videoinput') {
                     return { label: item.label, deviceId: item.deviceId }
                 }
@@ -159,7 +159,7 @@ function checkPlatform(){
         // Prompting to go to Mobile devices
         CameraUI.style.display = 'none'
         FallbackUI.style.display = 'block'
-        return alert('This works best on your mobile')
+        return
     }
     // starting the camera
     capture()
