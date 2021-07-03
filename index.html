@@ -1,10 +1,13 @@
 <!-- 
     Hola Amigos,
-    > So, if you are seeing this, you might be a developer, and is welcomed.
+    > So, if you are seeing this, you might be a developer, and are welcomed.
     > You are entirely free to copy/refer from this website (except my pictures/avatars 😅), no copyright issues.
     > If you want any help you can ping me.
     > Everything you see on this website is not developed by me from scratch, some opensource techologies are involved in the creation of this website,
     , all that things belongs to their respective owners/community. Rest the design and creation of this website is wholly & solely done by Me.
+    > Icons are provided by Fontawesome.com, do checkout their website, they have awesome designs.
+    > The Images used (except the first one, it was made using adobe illustrator) are taken from pinterest.
+    > The horizontal divider used, is taken from https://codepen.io/anthony-liddle/pen/eYpRavv
     
     Yours Sincerely,
     Mehul Singh Teya
@@ -14,416 +17,538 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- For external links --><link rel="stylesheet" href="./static/css/main-min.css"><link rel="stylesheet" href="./static/css/loader-min.css">
-        <!-- Fontawesome --><script src="https://kit.fontawesome.com/5077a37d50.js" crossorigin="anonymous"></script>
-        <!-- For Typer.JS --><script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-        <!-- For Animate.css --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
-        <!-- Favicon --><link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon.png">
-        <!-- For SweetAlerts2 --><script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-        <title>Mehul Singh Teya | Portfolio</title>
-    </head>
-    <body id="main-body">
-        <!-- Loader -->
-        <div class="loading-screen" id="loader">
-            <div style="background-color:#fc5c65;"></div>
-            <div style="background-color:#fed330;"></div>
-            <div style="background-color:#fd9644;"></div>
-            <div style="background-color:#26de81;"></div>
-            <div style="background-color:#a55eea;"></div>
-            <div style="background-color:#3498db;"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=``, initial-scale=1.0">
+    <!-- For Animate.css --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <!-- Favicon --><link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mehul Singh Teya | daxter-army | Portfolio</title>
+    <style>
+        @font-face {
+            font-family: DM Sans;
+            src: url('./static/font/dm_sans_regular.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe3c9;
+        }
+
+        body {
+            font-family: DM Sans, sans-serif;
+        }
+
+        a {
+            color: black;
+        }
+
+        i {
+            background-color: transparent;
+        }
+
+        .wrapper {
+            padding: 10px 30px;
+            /* margin: auto;
+            width: 60%; */
+            /* border: 1px red solid; */
+        }
+
+        header {
+            margin: auto;
+            padding: 20px 10px;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            /* border: 1px red solid; */
+        }
+
+        .header-links {
+            margin: 0px 10px;
+            padding: 0px 5px;
+            color: black;
+            text-decoration: none;
+            border: 2px #381a18 solid;
+            border-bottom: 5px #381a18 solid;
+            border-radius: 5px;
+        }
+
+        .header-links:active {
+            border-bottom: 2px #381a18 solid;
+        }
+
+        #heading {
+            color: #381a18;
+            margin-top: 20px;
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .subheading {
+            padding: 10px 0px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* GRID WITH NAME AND MY IMAGE */
+        .bio-grid {
+            padding: 10px 0px;
+            margin: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* TO CENTER MY INTRO WITH IMAGE */
+        .center-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* SKILLS GRID */
+        #skills-grid {
+            padding: 10px 0px;
+            margin: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: 30% 70%;
+            /* border: 1px red solid; */
+        }
+
+        #skills-grid-right {
+            padding-left: 15px;
+        }
+
+        /* #skills-grid > div {
+            border: 1px red solid;
+        } */
+
+        .skill-card {
+            padding: 10px 12px;
+            border-radius: 5px;
+            background-color: #ffd7b3;
+        }
+
+        .skill-card:hover {
+            background-color: #ffca99;
+        }
+
+        /* PROJECTS GRID */
+        #projects-grid {
+            position: relative;
+            padding: 20px 0px;
+            margin: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: 80% 20%;
+            /* border: 1px red solid; */
+        }
+
+        /* PROJECT CARDS */
+        .card {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card p {
+            background-color: #ffd7b3;
+        }
+
+        .card-heading {
+            font-weight: bold;
+        }
+
+        .card-main {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffd7b3;
+        }
+
+        .card-data {
+            font-size: 15px;
+            background-color: #ffd7b3;
+        }
+
+        .card .card-tech-stack {
+            font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffd7b3;
+        }
+
+        .card, .card > div {
+            background-color: #ffd7b3;
+        }
+
+        /* ALL LEGEND IMAGES */
+        #mob_banner_image {
+            display: none;
+        }
+
+        #projects-img, #bio-img, #skills-img {
+            max-width: 100%;
+        }
+        
+        #projects-img, #skills-img {
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 85%;
+        }
+
+        #bio-img {
+            width: 400px;
+        }
+
+        /* GRID SETTINGS (PROJECTS) */
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 10px;
+        }
+
+        /* GRID SETTINGS (SKILLS) */
+        .responsive-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+            grid-gap: 10px;
+        }
+
+        /* CONTACT ME */
+        #presence {
+            padding: 20px 0px 10px 0px;
+            text-align: center;
+            font-size: 14px;
+            margin: auto;
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            /* border: 1px red solid; */
+        }
+
+        /* CONTACT LOGOS */
+        .contact-icons {
+            font-size: 2rem;
+        }
+
+        /* THINK TANK IMAGE */
+        #hero-img {
+            display: block;
+            margin: auto;
+            width: 20%;
+            /* border: 1px red solid; */
+        }
+
+        /* DIVIDER */
+        /* taken from: https://codepen.io/anthony-liddle/pen/eYpRavv */
+        hr {
+            margin: 1em auto;
+            position: relative;
+            height: 9px;
+            width: 9px;
+            border: transparent;
+            overflow: visible;
+            background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="4" fill="%231CB0A8" /></svg>');
+        }
+
+        hr:before {
+            position: absolute;
+            height: 9px;
+            width: 10px;
+            content: "";
+            background-image: url('data:image/svg+xml;utf8,<svg width="10" height="9" viewBox="0 0 10 9" xmlns="http://www.w3.org/2000/svg"><path d="M3.91043 1.29752C4.30449 0.688518 5.19551 0.688519 5.58957 1.29752L9.25143 6.95675C9.68196 7.62211 9.20436 8.5 8.41186 8.5H1.08814C0.29564 8.5 -0.181954 7.62211 0.248574 6.95675L3.91043 1.29752Z" fill="%23FCB643" /></svg>');
+            left: -18px;
+        }
+
+        hr:after {
+            position: absolute;
+            height: 9px;
+            width: 9px;
+            content: "";
+            background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="1" fill="%23EF4056" /></svg>');
+            right: -18px;
+        }
+
+        /* MEDIA QUERIES */
+        @media only screen and (max-width: 700px) {
+            .wrapper {
+                padding: 5px 5px;
+            }
+
+            .center-flex {
+                text-align: center;
+            }
+
+            #mob_banner_image {
+                display: block;
+                margin: 10px auto;
+                width: 60%;
+            }
+
+            #bio-img-div, #about-me, #skills-img-div, #projects-grid-right {
+                display: none;
+            }
+
+            #skills-grid, #projects-grid {
+                display: block;
+            }
+
+            #skills-grid-right, #projects-grid-left {
+                padding: 0px 5px;
+            }
+
+            #projects-grid, #skills-grid, #bio-grid, #presence{
+                width: 100%;
+            }
+
+            #heading {
+                margin-bottom: 10px;
+                font-size: 2.5rem;
+            }
+
+            .subheading {
+                font-size: 1rem;
+            }
+
+            #presence > div{
+                margin-bottom: 10px;
+            }
+
+            .contact-link {
+                font-size: 12px;
+            }
+            
+            #hero-img {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <!-- THIS WILL WORK IN PRODUCTION -->
+            <a href="/daxUI" class="header-links">/daxUI</a>
+            <a href="/ex-sa" class="header-links">/ex-sa</a>
         </div>
-        <!-- Gradient Bar at top -->
-        <div class="header-bar"></div>
-        <a class="float animate__animated animate__bounceInLeft" onclick="toggleMode();">
-            <i class="fas fa-paint-roller my-float"></i>
-        </a>
-        <!-- Main Content -->
-        <div class="container">
-            <div class="archive">
-                <div id="home">
-                    <div id="self">
-                        <h1 class="animate__animated animate__zoomInDown" id="me-2">Mehul Singh Teya</h1>
-                        <br>
-                        <br>
-                        <h2>I <img id="heart" src="./static/img/heart.png"><span class="typer" id="main" data-words=" Volleyball, Piano, Video Games, Minesweeper, Vector Arts" data-delay="100" data-deleteDelay="1000"></span>
-                            <span class="cursor" data-owner="main"></span></h2>
-                            <br>
-                            <p id="bio" style="font-size: 19px;">Hello, I am Mehul Singh Teya.<br>I am a Computer Science Undergrad at Thapar University, Patiala. A Creative thinker and a Tea Lover, who loves to build to solve problems.</p>
-                            <br>
-                            <br>
-                            <a id="resume-btn" href="./static/img/email.png" download><i class="fas fa-file-alt"></i> Resume</a>
-                    </div>
-                    <!-- Normal Mode -->
-                    <img class="image-one" src="../static/img/mehul_mobile.svg" alt="brand-image" title="made in adobe illustrator">
-                     <!-- Mobile Mode -->
-                    <img class="image-two" src="../static/img/mehul_mobile.svg" alt="brand-image" title="made in adobe illustrator">
+        <div>
+            <a href="https://linkedin.com/in/mehul-singh-teya" target="_blank" style="font-size: 25px;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+    <div id="wrapper" class="wrapper">
+        <div class="bio-grid" id="bio">
+            <div class="center-flex">
+                <div>
+                    <p id="heading">Mehul Singh Teya</p>
+                    <p id="about-me" class="subheading">About Me</p>
+                    <p style="font-size: 15px;">Hello, 👋<br/>I am a Final Year Computer Science Student at TIET, Patiala.<br/>
+                    I love to solve solutions for real world problems and passionate about designing and building things.<br/>
+                    I love cli. I love linux.</p>
                 </div>
-                <div class="qualities">
-                    <h1 id='skills-heading'>My Skills</h1>
-                    <div class="skills">
-                        <div>
-                            <h3 style="font-size: 22px;">#interests</h3>
-                                <p>AI/ML<br>cli<br>Figma<br>Illustrator<br><span id="infinity-span" style="font-weight: bold;">. . . to <img id="infinity" src="../static/img/inf_black.png" style="width: 20px; vertical-align: middle;"> & beyond 🚀</span></p>
-                        </div>
-                        <!-- <div>
-                            <h3 style="font-size: 22px;"><span style="background-color: #a55eea;color: white;">#core</span></h3>
-                            <p>Data Structures<br>Operating Systems<br>Computer Networks<br>Database Management Systems</p>
-                        </div> -->
-                        <div>
-                            <h3 style="font-size: 22px;">#languages</h3>
-                            <!-- <p>C++<br>Python<br>Javascript</p> -->
-                            <div style="display: flex; margin-top: 10px;">
-                                <div>
-                                    <img class="langs-logo" src="./static/img/cpp.svg"/>
-                                    <p>C++</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/python.svg"/>
-                                    <p>Python</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/js.svg"/>
-                                    <p>javascript</p>
-                                </div>
+            </div>
+            <div id="bio-img-div"><img id="bio-img" src="./static/img/mehul_mobile.svg"/></div>
+        </div>
+        <img id="mob_banner_image" src="./static/img/mehul_mobile.svg" alt="mobile-image-banner"/>
+        <div id="skills-grid">
+            <div id="skills-img-div"><img id="skills-img" src="./static/img/lie_laptop_cleaned.png"/></div>
+            <div id="skills-grid-right"><p class="subheading">Technologies I have worked in</p>
+            <div class="responsive-grid-2">
+                <div class="skill-card">🚀 C++</div>
+                <div class="skill-card">🐍 Python</div>
+                <div class="skill-card">🧠 Javascript</div>
+                <div class="skill-card">🎮 NodeJS</div>
+                <div class="skill-card">🔥 ReactJS</div>
+                <div class="skill-card">🧲 React-Redux</div>
+                <div class="skill-card">📕 Git</div>
+                <div class="skill-card">💾 MongoDB</div>
+                <div class="skill-card">💯 Adobe Illustrator</div>
+                <div class="skill-card">✒️ Figma</div>
+            </div>
+            </div>
+        </div>
+        <div id="projects-grid">
+            <div id="projects-grid-left">
+                <p class="subheading">Projects, more on my <a href="https://github.com/daxter-army/" target="_blank"><i class="fab fa-github"></i></a></p>
+                <div class="responsive-grid">
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">voice assistant</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/crappy_voice_assistant/" target="_blank"><i class="fab fa-github"></i></a>
                             </div>
                         </div>
-                        <div>
-                            <h3 style="font-size: 22px;">#frameworks&Databases</h3>
-                            <!-- <p>ReactJS<br>NodeJS<br>MongoDB<br>ExpressJS</p> -->
-                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 10px;">
-                                <div>
-                                    <img class="langs-logo" src="./static/img/react.svg"/>
-                                    <p>React JS</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/nodejs.svg"/>
-                                    <p>Node JS</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/redux.svg"/>
-                                    <p>react-redux</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/mongodb.svg"/>
-                                    <p>Mongo DB</p>
-                                </div>
-                            </div>
+                        <div class="card-data">
+                            <p>created an auto suggestion tool, using minimum edit distance, dynamic programming, in the form of webapp using react & redux.</p>
                         </div>
-                        <div>
-                            <h3 style="font-size: 22px;">#otherSkills</h3>
-                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; margin-top: 10px;">
-                                <div>
-                                    <img class="langs-logo" src="./static/img/illustrator.svg"/>
-                                    <p>Adobe Illustrator</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/figma.svg"/>
-                                    <p>Figma</p>
-                                </div>
-                                <div>
-                                    <img class="langs-logo" src="./static/img/git.svg"/>
-                                    <p>Git</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="myProjects">
-                    <h1 id='projects-heading'>My Projects</h1>
-                    <p style="display: inline-block;">
-                        & many more on <a 
-                            style="color:black;" 
-                            target="_blank" 
-                            href="https://www.github.com/daxter-army">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </p>
-                    <div class="projects">
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>voice assistant</b></p>
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://www.github.com/daxter-army/daxUI/" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>created an auto suggestion tool, using minimum edit distance, dynamic programming, in the form of webapp using react & redux.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <div>
-                                    <p><i class="fab fa-react"></i> react</p>
-                                    <p><i class="fab fa-python"></i> python</p>
-                                </div>
-                                <div>
-                                    <p><i class="fas fa-certificate"></i> react-redux</p>
-                                    <p><i class="fas fa-certificate"></i> nltk</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>transnoder-cli</b></p>
-                                    <!-- <p class="card-subheading"><span>cli</span><span></span></p> -->
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://www.github.com/daxter-army/transnoder-cli/" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>a nodejs cli app made with sockets.io, to send files over the internet.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <div>
-                                    <p><i class="fab fa-js-square"></i> javascript</p>
-                                    <p><i class="fab fa-node-js"></i> node.js</p>
-                                </div>
-                                <div>
-                                    <p><i class="fas fa-certificate"></i> sockets.io</p>
-                                    <p><i class="fas fa-certificate"></i> express.js</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>adobe-illustrator-assistant</b></p>
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://www.github.com/daxter-army/adobe-illustrator-assistant/" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>automated the adobe illustrator functions by voice, so that you need not move your hands again and again.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <div>
-                                    <p><i class="fab fa-python"></i> python</p>
-                                    <p><i class="fas fa-certificate"></i> python-auto-gui</p>
-                                </div>
-                                <div>
-                                    <p><i class="fas fa-certificate"></i> flask</p>
-                                    <p><i class="fas fa-certificate"></i> web-speech-api</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>daxUI</b></p>
-                                    <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://daxter-army.github.io/daxUI/" target="_blank"><i class="fas fa-globe-asia"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>a 3d isometric components libraries for custom projects, designed in adobe illustrator.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <p><i class="fab fa-js-square"></i> javascript</p>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
                                 <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fab fa-python"></i> python</p>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>halo react ecommerce</b></p>
-                                    <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://halo-apparels.herokuapp.com/" target="_blank"><i class="fas fa-globe-asia"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>an ecommerce website made using react, redux, styled-components, stripe-api, firebase etc.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <div>
-                                    <p><i class="fab fa-react"></i> react</p>
-                                    <p><i class="fas fa-certificate"></i> react-redux</p>
-                                </div>
-                                <div>
-                                    <p><i class="fas fa-certificate"></i> styled-components</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-main">
-                                <div class="card-main-left">
-                                    <p class="card-heading"><b>nlp project</b></p>
-                                    <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
-                                </div>
-                                <div class="card-main-right">
-                                    <a class="card-link" href="https://www.github.com/daxter-army/daxUI/" target="_blank"><i class="fab fa-github"></i></a>
-                                </div>
-                            </div>
-                            <div class="card-data">
-                                <p>created an auto suggestion tool, using minimum edit distance, dynamic programming, in the form of webapp using react & redux.</p>
-                            </div>
-                            <br/>
-                            <div class="card-tech-stack">
-                                <div>
-                                    <p><i class="fab fa-react"></i> react</p>
-                                    <p><i class="fab fa-python"></i> python</p>
-                                </div>
-                                <div>
-                                    <p><i class="fas fa-certificate"></i> react-redux</p>
-                                    <p><i class="fas fa-certificate"></i> nltk</p>
-                                </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> react-redux</p>
+                                <p><i class="fas fa-certificate"></i> nltk</p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="contact">
-                    <h1 id='contact-heading'>Contact Me</h1>
-                    <div class="contact-me">
-                        <form id="my-form" action="https://formspree.io/xknqeaqg" method="POST">
-                            <input id="form-name" type="text" placeholder='Name' name="name" autocomplete="off"/><br/>
-                            <input id="form-email" type="email" placeholder='Email' name="email" autocomplete="off"/><br/>
-                            <textarea id="form-message" type="text" placeholder='Message' name="message" rows='5' autocomplete="off"></textarea>
-                            <br/><button id="my-form-button">Send</button>
-                            <p id="my-form-status"></p>
-                        </form>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">transnoder-cli</p>
+                                <!-- <p class="card-subheading"><span>cli</span><span></span></p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/transnoder-cli/" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>a nodejs cli app made with sockets.io, to send files over the internet.</p>
+                        </div>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-js-square"></i> javascript</p>
+                                <p><i class="fab fa-node-js"></i> node.js</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> sockets.io</p>
+                                <p><i class="fas fa-certificate"></i> express.js</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div id="about">
-                    <h1 id='presence-heading'>My Presence</h1>
-                    <div class="case">
-                        <div>
-                            <img id="github-contact" src="../static/img/github.svg">
-                            <a target="_blank" href="https://www.github.com/daxter-army"><p>github.com/daxter-army</p></a>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">adobe-illustrator-assistant</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/adobe-illustrator-assistant/" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div>
-                            <img id="gmail-contact" src="../static/img/gmail2.svg">
-                            <a href="mailto:mehulsinghteya@gmail.com"><p>mehulsinghteya@gmail.com</p></a>
+                        <div class="card-data">
+                            <p>automated the adobe illustrator functions by voice, so that you need not move your hands again and again.</p>
                         </div>
-                        <!-- <div>
-                            <img id="instagram-contact" src="../static/img/instagram.svg">
-                            <a target="_blank" href="https://www.instagram.com/mehul_singh_teya"><p>@mehul_singh_teya</p></a>
-                        </div> -->
-                        <div>
-                            <img id="linkedin-contact" src="../static/img/linkedin.svg">
-                            <a target="_blank" href="https://www.linkedin.com/in/mehul-singh-teya-555648156/"><p>Mehul Singh Teya</p></a>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-python"></i> python</p>
+                                <p><i class="fas fa-certificate"></i> python-auto-gui</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> flask</p>
+                                <p><i class="fas fa-certificate"></i> web-speech-api</p>
+                            </div>
                         </div>
-                        <div>
-                            <img id="internet-contact" src="../static/img/internet.png">
-                            <a href="#main-body"><p>daxter-army.github.io</p></a>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">daxUI</p>
+                                <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://daxter-army.github.io/daxUI/" target="_blank"><i class="fas fa-globe-asia"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>a 3d isometric components libraries for custom projects, designed in adobe illustrator.</p>
+                        </div>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-js-square"></i> javascript</p>
+                                <p><i class="fab fa-github-alt"></i> gh-pages</p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fab fa-osi"></i> open source</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">Ex-Sa: Exam Saviour</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://daxter-army.github.io/ex-sa" target="_blank"><i class="fas fa-globe-asia"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>an online portal, for hosting study material for my branch COSE, used by 100s of students.</p>
+                        </div>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fas fa-compress-arrows-alt"></i> collaboration</p> 
+                            </div>
+                            <div>
+                                <p><i class="fab fa-osi"></i> open-source</p>
+                                <p><i class="fab fa-github-alt"></i> gh-pages</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">nlp project</p>
+                                <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/daxUI/" target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>created an auto suggestion tool, using minimum edit distance, dynamic programming, in the form of webapp using react & redux.</p>
+                        </div>
+                        <br/>
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fab fa-python"></i> python</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> react-redux</p>
+                                <p><i class="fas fa-certificate"></i> nltk</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="projects-grid-right">
+                <img id="projects-img" src="./static/img/ladder_removed_bg.png"/>
+            </div>
         </div>
-        <p id="copyright">Made with ❤️ by Mehul Singh Teya</p>
-        <!-- For Linked In Badge -->
-        <!-- <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script> -->
-        <!-- For Jquery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-        
-        <script type="text/javascript">
-            // For toggle mode 
-            const body=document.getElementById("main-body");
-            const fullImage=document.getElementById("image-one");
-            const mobileImage=document.getElementById("image-two");
-            const floatButton=document.querySelector('.float');
-            const infinity=document.getElementById('infinity');
-            const infintyLine=document.getElementById('infinity-span');
-            var decide=true;
-            
-            function toggleMode(){
-                if(decide){
-                    body.style.backgroundColor="#fab95f";
-                    infinity.src="../static/img/inf_maroon.png";
-                    infintyLine.style.color="maroon";
-                    floatButton.style.backgroundColor="white";
-                    floatButton.style.color="black";
-                    document.getElementById('form-name').style.backgroundColor='#fab95f';
-                    document.getElementById('form-email').style.backgroundColor='#fab95f';
-                    document.getElementById('form-message').style.backgroundColor='#fab95f';
-                    decide=false;
-                }
-                else{
-                    body.style.backgroundColor="#ffffff";
-                    infinity.src="../static/img/inf_black.png";
-                    infintyLine.style.color="black";
-                    floatButton.style.backgroundColor="#fab95f";
-                    floatButton.style.color="white";
-                    document.getElementById('form-name').style.backgroundColor='white';
-                    document.getElementById('form-email').style.backgroundColor='white';
-                    document.getElementById('form-message').style.backgroundColor='white';
-                    decide=true;
-                }
-            }
-            
-            // For Preloader Fadeout
-            $(document).ready(function(){
-                preloaderFadeOutTime=500;
-
-                function hidePreloader(){
-                    var preloader=$('.loading-screen');
-                    preloader.fadeOut(preloaderFadeOutTime);
-                }
-                hidePreloader();})
-        </script>
-        <!-- For Form submission -->
-        <script>
-            window.addEventListener("DOMContentLoaded", function() {
-              
-              var form = document.getElementById("my-form");
-              var button = document.getElementById("my-form-button");
-              var status = document.getElementById("my-form-status");
-          
-              function success() {
-                form.reset();
-                button.style = "display: block ";
-                status.innerHTML = "";
-                button.disabled = false
-                return Swal.fire('Thanks ', 'I will contact you shortly.', 'success')
-              }
-          
-              function error() {
-                button.style = "display: block ";
-                status.innerHTML = "";
-                button.disabled = false
-                return Swal.fire('Oops!', 'There was a problem, try again.', 'error')
-              }
-          
-              form.addEventListener("submit", function(ev) {
-                ev.preventDefault();
-                var data = new FormData(form);
-                if (!(data.get('name') && data.get('email') && data.get('message'))) {
-                    return Swal.fire('Empty field(s)!', 'Fill all the fields', 'warning')
-                }
-                button.disabled = true
-                button.style.display = 'none'
-                status.innerHTML = "Sending...";
-                ajax(form.method, form.action, data, success, error);
-              });
-            });
-            
-            function ajax(method, url, data, success, error) {
-              var xhr = new XMLHttpRequest();
-              xhr.open(method, url);
-              xhr.setRequestHeader("Accept", "application/json");
-              xhr.onreadystatechange = function() {
-                if (xhr.readyState !== XMLHttpRequest.DONE) return;
-                if (xhr.status === 200) {
-                  success(xhr.response, xhr.responseType);
-                } else {
-                  error(xhr.status, xhr.response, xhr.responseType);
-                }
-              };
-              xhr.send(data);
-            }
-          </script>
-    </body>
+        <!-- <div id="hr"></div> -->
+        <hr/>
+        <div id="presence">
+            <div>
+                <i class="fab fa-github contact-icons"></i>
+                <a class="contact-link" target="_blank" href="https://www.github.com/daxter-army"><p>github.com/daxter-army</p></a>
+            </div>
+            <div>
+                <i class="far fa-envelope contact-icons"></i>
+                <a class="contact-link" href="mailto:mehulsinghteya@gmail.com"><p>mehulsinghteya@gmail.com</p></a>
+            </div>
+            <div>
+                <i class="fab fa-linkedin contact-icons"></i>
+                <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/mehul-singh-teya/"><p>Mehul Singh Teya</p></a>
+            </div>
+            <div>
+                <i class="fas fa-globe-asia contact-icons"></i>
+                <a class="contact-link" href="#wrapper"><p>daxter-army.github.io</p></a>
+            </div>
+        </div>
+        <img id="hero-img" src="./static/img/think_tank_2.png" alt="think_tank"/>
+    </div>
+</body>
 </html>
