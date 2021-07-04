@@ -1,20 +1,3 @@
-<!-- 
-    Hola Amigos,
-    > So, if you are seeing this, you might be a developer, and are welcomed.
-    > You are entirely free to copy/refer from this website (except my pictures/avatars 😅), no copyright issues.
-    > If you want any help you can ping me.
-    > Everything you see on this website is not developed by me from scratch, some opensource techologies are involved in the creation of this website,
-    , all that things belongs to their respective owners/community. Rest the design and creation of this website is wholly & solely done by Me.
-    > Icons are provided by Fontawesome.com, do checkout their website, they have awesome designs.
-    > The Images used (except the first one, it was made using adobe illustrator) are taken from pinterest.
-    > The horizontal divider used, is taken from https://codepen.io/anthony-liddle/pen/eYpRavv
-    
-    Yours Sincerely,
-    Mehul Singh Teya
- -->
-
- <!-- HERE, THE CODE BEGINS -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -245,33 +228,10 @@
         }
 
         /* DIVIDER */
-        /* taken from: https://codepen.io/anthony-liddle/pen/eYpRavv */
-        hr {
-            margin: 1em auto;
-            position: relative;
-            height: 9px;
-            width: 9px;
-            border: transparent;
-            overflow: visible;
-            background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="4" fill="%231CB0A8" /></svg>');
-        }
-
-        hr:before {
-            position: absolute;
-            height: 9px;
-            width: 10px;
-            content: "";
-            background-image: url('data:image/svg+xml;utf8,<svg width="10" height="9" viewBox="0 0 10 9" xmlns="http://www.w3.org/2000/svg"><path d="M3.91043 1.29752C4.30449 0.688518 5.19551 0.688519 5.58957 1.29752L9.25143 6.95675C9.68196 7.62211 9.20436 8.5 8.41186 8.5H1.08814C0.29564 8.5 -0.181954 7.62211 0.248574 6.95675L3.91043 1.29752Z" fill="%23FCB643" /></svg>');
-            left: -18px;
-        }
-
-        hr:after {
-            position: absolute;
-            height: 9px;
-            width: 9px;
-            content: "";
-            background-image: url('data:image/svg+xml;utf8,<svg width="9" height="9" viewBox="0 0 9 9" xmlns="http://www.w3.org/2000/svg"><rect x="0.75" y="0.5" width="8" height="8" rx="1" fill="%23EF4056" /></svg>');
-            right: -18px;
+        #hr-divider-img {
+            margin: 5px auto;
+            display: block;
+            width: 50px;
         }
 
         /* MEDIA QUERIES */
@@ -529,8 +489,7 @@
                 <img id="projects-img" src="./static/img/ladder_removed_bg.png"/>
             </div>
         </div>
-        <!-- <div id="hr"></div> -->
-        <hr/>
+        <img id="hr-divider-img" src="./static/img/divider.svg" alt="divider"/>
         <div id="presence">
             <div>
                 <i class="fab fa-github contact-icons"></i>
