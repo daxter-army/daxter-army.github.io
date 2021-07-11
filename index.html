@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FOR FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/img/favicon.png">
+    <!-- FOR FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- FOR MINIFIED CSS -->
+    <link rel="stylesheet" href="./static/css/index-min.css"/>
+    <title>Mehul Singh Teya | daxter-army | Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- THIS WILL WORK IN PRODUCTION -->
+            <a href="/daxUI" class="header-links">/daxUI</a>
+            <a href="/ex-sa" class="header-links">/ex-sa</a>
+        </div>
+        <div>
+            <a href="https://linkedin.com/in/mehul-st" target="_blank" style="font-size: 25px;"><i
+                    class="fab fa-linkedin"></i></a>
+        </div>
+    </header>
+    <div id="wrapper" class="wrapper">
+        <div class="bio-grid" id="bio">
+            <div class="center-flex">
+                <div>
+                    <p id="heading">Mehul Singh Teya</p>
+                    <p id="about-me" class="subheading">About Me</p>
+                    <p style="font-size: 16px;">Hello, 👋<br />I am a Final Year Computer Science Student at TIET,
+                        Patiala.<br />
+                        I love to solve solutions for real world problems and passionate about designing and building
+                        things.<br /><br />
+                        I like drawing Vector arts, Moon walk (improving it!), Minesweeper, Piano and walking through
+                        different places.</p>
+                    <br />
+                    <a id="resume-link" onclick="downloaded();" href="./static/resume.pdf"
+                        download="mehul_singh_teya_resume.pdf"><i class="fas fa-file"></i>
+                        Resume</a>
+                    <a id="resume-dl-check"><i class="fas fa-check"></i></a>
+
+                </div>
+            </div>
+            <div id="bio-img-div"><img id="bio-img" src="./static/img/mehul_mobile.svg" alt="hero-image"
+                    title="Made in Adobe Illustrator" /></div>
+        </div>
+        <img id="mob_banner_image" src="./static/img/mehul_mobile.svg" alt="mobile-image-banner"
+            title="made in adobe illustrator" />
+        <div id="skills-grid">
+            <div id="skills-img-div"><img id="skills-img" src="./static/img/lie_laptop_cleaned.png" /></div>
+            <div id="skills-grid-right">
+                <p class="subheading">Technologies I have worked in</p>
+                <div class="responsive-grid-2">
+                    <div class="skill-card">🚀 C++</div>
+                    <div class="skill-card">🐍 Python</div>
+                    <div class="skill-card">🧠 Javascript</div>
+                    <div class="skill-card">🎮 NodeJS</div>
+                    <div class="skill-card">⚡ ExpressJS</div>
+                    <div class="skill-card">⚛️ ReactJS</div>
+                    <div class="skill-card">🧲 React-Redux</div>
+                    <div class="skill-card">📕 Git</div>
+                    <div class="skill-card">💾 MongoDB</div>
+                    <div class="skill-card">💯 Adobe Illustrator</div>
+                    <div class="skill-card">✒️ Figma</div>
+                </div>
+            </div>
+        </div>
+        <div id="projects-grid">
+            <div id="projects-grid-left">
+                <p class="subheading">Projects, more on my <a href="https://github.com/daxter-army/" target="_blank"><i
+                            class="fab fa-github"></i></a></p>
+                <div class="responsive-grid">
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">transnoder-cli</p>
+                                <!-- <p class="card-subheading"><span>cli</span><span></span></p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/transnoder-cli/"
+                                    target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>a nodejs cli app made with sockets.io, to send files over the internet, without the use
+                                of any third party app/api.</p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-js-square"></i> javascript</p>
+                                <p><i class="fab fa-node-js"></i> node.js</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> sockets.io</p>
+                                <p><i class="fas fa-certificate"></i> express.js</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">voice-assistant</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/crappy_voice_assistant/"
+                                    target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>a voice assistant, using python and javascript, can do tasks like google assistant/siri.
+                            </p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-js-square"></i> javascript</p>
+                                <p><i class="fas fa-certificate"></i> web-speech-api</p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-python"></i> python</p>
+                                <p><i class="fas fa-certificate"></i> speech-recognition</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">adobe-illustrator-assistant</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link"
+                                    href="https://www.github.com/daxter-army/adobe-illustrator-assistant/"
+                                    target="_blank"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>invoke the inbuilt functions of illustrator without your hands, with your voice, so that
+                                you need not move your hands again and again.</p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-python"></i> python</p>
+                                <p><i class="fas fa-certificate"></i> python-auto-gui</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> flask</p>
+                                <p><i class="fas fa-certificate"></i> web-speech-api</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">daxUI</p>
+                                <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://daxter-army.github.io/daxUI/" target="_blank"><i
+                                        class="fas fa-globe-asia"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>a 3d isometric components libraries for custom projects, designed differently, elegantly.
+                            </p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-js-square"></i> javascript</p>
+                                <p><i class="fab fa-github-alt"></i> gh-pages</p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fab fa-osi"></i> open source</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">ExSa: Exam Saviour</p>
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://daxter-army.github.io/ex-sa" target="_blank"><i
+                                        class="fas fa-globe-asia"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>an online portal, for hosting study material for my branch COSE, used by 100s of
+                                students.</p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fas fa-compress-arrows-alt"></i> collaboration</p>
+                            </div>
+                            <div>
+                                <p><i class="fab fa-osi"></i> open-source</p>
+                                <p><i class="fab fa-github-alt"></i> gh-pages</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-main">
+                            <div class="card-main-left">
+                                <p class="card-heading">tba</p>
+                                <!-- <p class="card-subheading">a 3d isometric components libraries for custom projects</p> -->
+                            </div>
+                            <div class="card-main-right">
+                                <a class="card-link" href="https://www.github.com/daxter-army/daxUI/" target="_blank"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-data">
+                            <p>tba</p>
+                        </div>
+                        <br />
+                        <div class="card-tech-stack">
+                            <div>
+                                <p><i class="fab fa-react"></i> react</p>
+                                <p><i class="fab fa-python"></i> python</p>
+                            </div>
+                            <div>
+                                <p><i class="fas fa-certificate"></i> react-redux</p>
+                                <p><i class="fas fa-certificate"></i> nltk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="projects-grid-right">
+                <img id="projects-img" src="./static/img/ladder_removed_bg.png" />
+            </div>
+        </div>
+        <img id="hr-divider-img" src="./static/img/divider.svg" alt="divider" />
+        <div id="presence">
+            <div>
+                <i class="fab fa-github contact-icons"></i>
+                <a class="contact-link" target="_blank" href="https://www.github.com/daxter-army">
+                    <p>github.com/daxter-army</p>
+                </a>
+            </div>
+            <div>
+                <i class="far fa-envelope contact-icons"></i>
+                <a class="contact-link" href="mailto:mehulsinghteya@gmail.com">
+                    <p>mehulsinghteya@gmail.com</p>
+                </a>
+            </div>
+            <div>
+                <i class="fab fa-linkedin contact-icons"></i>
+                <a class="contact-link" target="_blank" href="https://www.linkedin.com/in/mehul-st/">
+                    <p>Mehul Singh Teya</p>
+                </a>
+            </div>
+            <div>
+                <i class="fas fa-globe-asia contact-icons"></i>
+                <a class="contact-link" href="#wrapper">
+                    <p>daxter-army.github.io</p>
+                </a>
+            </div>
+        </div>
+        <img id="hero-img" src="./static/img/think_tank_2.png" alt="think_tank" title="It's a Think Tank" />
+    </div>
+    <script>
+        const downloadIndicator = document.getElementById('resume-dl-check');
+
+        function downloaded() {
+            downloadIndicator.style.display = "inline-block";
+
+            const timer = setTimeout(() => {
+                downloadIndicator.style.display = "none"
+            }, 1500)
+
+        }
+    </script>
+</body>
+
+</html>
