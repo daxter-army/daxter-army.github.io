@@ -1,7 +1,6 @@
 @font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  font-family: Consolas;
+  src: url(./assets/Consolas.ttf);
 }
 
 * {
@@ -57,7 +56,7 @@ a {
 .header-project-url-link {
   color: white;
   text-align: center;
-  font-family: consolas;
+  font-family: Consolas;
   transition: 0.1s;
   border: 1px transparent solid;
   width: 100%;
@@ -131,11 +130,11 @@ nav ul li {
 /*? PROJECTS STARTS */
 .projects-grid {
   position: relative;
-  padding: 40px;
+  /* padding: 40px; */
   display: grid;
   grid-gap: 100px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  /* border: 1px red solid; */
+  border: 1px red solid;
 }
 
 .grid-item {
@@ -157,6 +156,7 @@ nav ul li {
   width: 300px;
   height: 300px;
   transition: 0.1s;
+  border: 1px red solid;
 }
 
 .project-item-link {
@@ -349,7 +349,7 @@ nav ul li {
   }
 
   .projects-grid {
-    padding: 20px;
+    padding: unset;
     grid-gap: 80px;
   }
 
@@ -370,5 +370,9 @@ nav ul li {
 
   .presence-flex {
     flex-direction: column;
+  }
+
+  .presence-flex p {
+    font-size: 14px;
   }
 }
