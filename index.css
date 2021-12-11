@@ -247,11 +247,6 @@ nav ul li {
   margin-bottom: 10px;
 }
 
-.project-item-desc {
-  font-size: 16px;
-  /* display: none; */
-}
-
 .project-item-tags {
   display: none;
   padding: 0px 5px;
@@ -314,6 +309,28 @@ nav ul li {
     width: 70%;
   }
 
+  .project-item-tags > p {
+    font-size: 20px;
+  }
+
+  .project-item,
+  .project-item-shadow {
+    height: 250px;
+    width: 250px;
+  }
+
+  .project-item-link {
+    font-size: 22px;
+  }
+
+  .project-item-title {
+    font-size: 22px;
+  }
+
+  .project-item-desc {
+    font-size: 14px;
+  }
+
   #intro-line {
     font-size: 16px;
     line-height: 22px;
@@ -332,6 +349,7 @@ nav ul li {
   }
 
   .projects-grid {
+    padding: 20px;
     grid-gap: 80px;
   }
 
