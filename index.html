@@ -37,10 +37,10 @@
                     </ul>
                 </div>
                 <div id="header-social-links-div">
-                    <a id="header-menu-btn"><i class="fas fa-bars"></i></a>
+                    <a id="header-menu-btn"><i class="top-icons fas fa-bars"></i></a>
                     <div>
-                        <a href="https://linkedin.com/in/mehulsinghteya" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/daxter-army" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/mehulsinghteya" target="_blank"><i class="top-icons fab fa-linkedin"></i></a>
+                        <a href="https://github.com/daxter-army" target="_blank"><i class="top-icons fab fa-github"></i></a>
                     </div>
                 </div>
             </nav>
@@ -186,22 +186,30 @@
             <!-- <h3>My Presence</h3> -->
             <div class="presence-flex">
                 <a class="presence-flex-item" href="https://github.com/daxter-army">
-                    <i class="fab fa-github fa-2x"></i>
+                    <i class="presence-icon fab fa-github fa-2x"></i>
                     <p>@daxter-army</p>
                 </a>
                 <a class="presence-flex-item" href="mailto:mehulsinghteya@gmail.com">
-                    <i class="fas fa-at fa-2x"></i>
+                    <i class="presence-icon fas fa-at fa-2x"></i>
                     <p>mehulsinghteya@gmail.com</p>
                 </a>
                 <a class="presence-flex-item" href="https://linkedin.com/in/mehulsinghteya">
-                    <i class="fab fa-linkedin fa-2x"></i>
+                    <i class="presence-icon fab fa-linkedin fa-2x"></i>
                     <p>/mehulsinghteya</p>
                 </a>
             </div>
         </section>
     </div>
-    <script src="./gsap.js"></script>
+    <!-- <script src="./gsap.js"></script>
     <script src="./scrollTrigger.js"></script>
-    <script src="index.js"></script>
+    <script src="./skew.js"></script> -->
+    <script src="./index.js"></script>
+    <script>
+        if (window.matchMedia("(min-width: 800px)").matches) {
+            document.write('<script type="text/javascript" src="./gsap.js"><\/script>');
+            document.write('<script type="text/javascript" src="./scrollTrigger.js"><\/script>');
+            document.write('<script type="text/javascript" src="./skew.js"><\/script>');
+        }
+    </script>
 </body>
 </html>
