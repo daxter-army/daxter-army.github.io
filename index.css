@@ -132,7 +132,7 @@ nav ul li {
   padding: 0px 40px 30px 40px;
   display: grid;
   grid-gap: 100px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   /* border: 1px red solid; */
 }
 
@@ -208,6 +208,12 @@ nav ul li {
   background: linear-gradient(to bottom, #00dbde, #fc00ff);
 }
 
+#project-item-six {
+  background: #c6ffdd;
+  background: -webkit-linear-gradient(to top, #f7797d, #fbd786, #c6ffdd);
+  background: linear-gradient(to top, #f7797d, #fbd786, #c6ffdd);
+}
+
 #project-item-one-shadow {
   border-image: linear-gradient(to bottom, #f8ffae, #43c6ac) 1;
 }
@@ -228,6 +234,10 @@ nav ul li {
   border-image: linear-gradient(to bottom, #00dbde, #fc00ff) 1;
 }
 
+#project-item-six-shadow {
+  border-image: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d) 1;
+}
+
 /*? PROJECT CARD ITEMS STARTS */
 .project-item-header {
   font-size: 25px;
@@ -242,7 +252,7 @@ nav ul li {
 .project-item-title {
   font-family: consolas;
   font-weight: bold;
-  font-size: 28px;
+  font-size: 29px;
   margin-bottom: 10px;
 }
 
@@ -263,7 +273,7 @@ nav ul li {
   /* padding: 2px 4px; */
   /* margin: auto; */
   /* text-align: center; */
-  font-size: 25px;
+  font-size: 26px;
   font-weight: bold;
 }
 /*? PROJECT CARD ITEMS ENDS */
@@ -271,7 +281,7 @@ nav ul li {
 
 /*? MY PRESENCE STARTS */
 .presence-flex {
-  margin: 20px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   padding: 0px 95px;
   display: flex;
   justify-content: space-between;
