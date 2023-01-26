@@ -1,0 +1,76 @@
+.HomeWpr .intro {
+	display: flex;
+	justify-content: space-between;
+}
+
+.HomeWpr .intro .leftSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.HomeWpr .introSalutation {
+	padding: 12px;
+	margin: 0px auto;
+	color: var(--text-salutation);
+	background-color: var(--text-salutation-bg);
+	border-radius: 4px;
+	width: max-content;
+	margin-bottom: 60px;
+}
+
+.HomeWpr .intro h1 {
+	font-size: 35px;
+	/* font-weight: 400; */
+	/* line-height: 40px; */
+	/* font-family: 'Staatliches', sans-serif; */
+}
+
+.HomeWpr .info .year {
+	margin-right: 24px;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.HomeWpr .info .iconLink {
+	margin-bottom: 6px;
+	font-weight: 500;
+	color: var(--text-social);
+}
+
+.HomeWpr .info .iconLink:not(:last-child) {
+	margin-bottom: 6px;
+}
+
+
+.HomeWpr .info h2 {
+	text-decoration: underline;
+	margin-bottom: 14px;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 4px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	font-family: 'Staatliches', cursive;
+}
+
+.HomeWpr .info {
+	margin-bottom: 16px;
+}
+
+.HomeWpr .info .desc {
+	text-indent: 16px;
+}
+
+.HomeWpr .info .desc,
+.HomeWpr .info .bullet {
+	line-height: 20px;
+}
+
+.HomeWpr .info .bullet {
+	margin-bottom: 6px;
+}
+
+.HomeWpr .intro img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}

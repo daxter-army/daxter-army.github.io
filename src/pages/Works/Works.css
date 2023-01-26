@@ -1,0 +1,14 @@
+.WorksWpr {
+	margin-bottom: 20px;
+}
+
+.WorksWpr .projectsCtr {
+	display: flex;
+	row-gap: 40px;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.WorksWpr .sectionHeading {
+	margin-bottom: 12px;
+}

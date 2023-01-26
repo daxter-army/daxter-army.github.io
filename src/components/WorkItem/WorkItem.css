@@ -1,0 +1,28 @@
+.WorkItemWpr img {
+	display: block;
+	width: 100%;
+}
+
+.WorkItemWpr .imgWpr {
+	position: relative;
+}
+
+.WorkItemWpr {
+	width: calc(50% - 20px);
+	display: block;
+	border-radius: 8px 8px 0px 0px;
+	overflow: hidden;
+	text-align: center;
+	cursor: pointer;
+	color: var(--text-primary) !important;
+}
+
+.WorkItemWpr .title {
+	font-weight: 500;
+	margin: 4px 0px;
+	font-size: 18px;
+}
+
+.WorkItemWpr:hover {
+	text-decoration: none;
+}

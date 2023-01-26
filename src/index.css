@@ -1,0 +1,74 @@
+/* COLORS FOR THEME */
+:root {
+	--background: #FCEDDA;
+	--text-primary: #111111;
+	--text-salutation: #3E2726;
+	--text-salutation-bg: #EFDECD;
+	--button-bg: #319795;
+	--text-social: #2C7A7B;
+}
+
+[data-theme='dark'] {
+	--background: #222222;
+	--text-primary: #ffffff;
+	--text-salutation: #ffffff;
+	--text-social: #81E6D9;
+	--text-salutation-bg: #333333;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: #000000;
+}
+
+button {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.iconLink {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+[data-theme='dark'] a {
+	color: #008CFF;
+}
+
+
+[data-theme='dark'] a:visited {
+	color: #6C5CE7;
+}
+
+body {
+	font-family: 'DM Sans', sans-serif;
+	background-color: var(--background);
+	color: var(--text-primary);
+	transition: all 0.2s;
+}
+
+.container {
+	width: 768px;
+	margin: 0px auto;
+}
+
+.containerMini {
+	width: 550px;
+	margin: 0px auto;
+}

@@ -1,0 +1,10 @@
+.showcaseWpr {
+	padding: 160px 0px 20px 0px;
+	display: flex;
+	justify-content: center;
+}
+
+.showcaseWpr img {
+	width: 400px;
+	margin-bottom: 16px;
+}

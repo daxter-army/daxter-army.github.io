@@ -1,0 +1,40 @@
+.themeBtn {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	font-size: 15px;
+	color: #ffffff;
+	border-radius: 6px;
+	border: none;
+	background-color: #8e44ad;
+}
+
+[data-theme='dark'] .themeBtn {
+	color: #111111;
+	background-color: #f6e58d;
+}
+
+.fade-enter {
+	opacity: 0;
+	transform: translateY(-30px);
+}
+
+.fade-enter-active {
+	opacity: 1;
+	transform: translateY(0px);
+	transition: all 250ms ease-in;
+}
+
+.fade-exit {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.fade-exit-active {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 250ms ease-in;
+}

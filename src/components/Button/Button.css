@@ -1,0 +1,16 @@
+.buttonWpr {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 12px;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	border-radius: 4px;
+	background-color: var(--button-bg);
+	border: none;
+}
+
+.buttonWpr.isCenter {
+	margin: 0px auto;
+}
