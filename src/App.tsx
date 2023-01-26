@@ -29,8 +29,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ theme: theme, themeClicker: themeHandler }}>
-      {/* <BrowserRouter basename='/daxter-army.github.io/'> */}
-      <BrowserRouter>
+      <BrowserRouter basename='/daxter-army.github.io/'>
+        {/* <BrowserRouter> */}
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
