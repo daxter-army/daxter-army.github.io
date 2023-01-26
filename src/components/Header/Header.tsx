@@ -20,7 +20,7 @@ const Header = () => {
 					</div>
 					<nav>
 						<Link to={'/works'}>Works</Link>
-						<Link to={'/posts'}>Articles</Link>
+						{/* <Link to={'/posts'}>Articles</Link> */}
 						<a href={GITHUB_URL} className="iconLink" target="_blank" rel="noreferrer" ><BsGithub size={18} /><span>Source</span></a>
 					</nav>
 				</div>

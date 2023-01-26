@@ -19,7 +19,7 @@ const Works = () => {
 		<div className='WorksWpr'>
 			<Showcase />
 			<div className='containerMini'>
-				<h2 className='sectionHeading'>Work</h2>
+				<h2 className='sectionHeading'>Works</h2>
 				<div className='projectsCtr'>
 					{
 						workItemsData.map(item => {
