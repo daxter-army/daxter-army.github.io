@@ -27,7 +27,7 @@ const Home = () => {
 				</div>
 				<div className='info'>
 					<h2>About</h2>
-					<p className='desc'>Mehul Singh Teya, is a Software Engineer with passion of building stuffs and services he likes. He likes to build projects, that not only can empower others, but also eases his own daily life. When not online, he likes to play minesweeper, solve Sudoku and play musical keyboard. <br /><br />Currently, he is working in a national leading online travel company <a href="https://www.makemytrip.com">MakeMyTrip</a>.</p>
+					<p className='desc'>Mehul Singh Teya, is a Software Engineer with passion of building stuffs and services he likes. He likes to build projects, that not only can help others, but also eases his own daily life. When not online, he likes to play minesweeper, solve Sudoku and play musical keyboard. <br /><br />Currently, he is working in a national leading online travel company <a href="https://www.makemytrip.com">MakeMyTrip</a>.</p>
 				</div>
 				<Button styles={{ marginTop: 20, marginBottom: 20 }} text="My Portfolio" isCenter={true} btnClicker={() => { navigate('/works') }} rightIcon={<BiChevronRight style={{ marginLeft: 4 }} />} />
 				<div className='info'>
