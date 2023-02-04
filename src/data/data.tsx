@@ -1,4 +1,5 @@
 import RbcIcon from "../assets/rbc.png"
+import RbtIcon from "../assets/rbt.png"
 import SimplIcon from "../assets/simpl.png"
 import DriftIcon from "../assets/drift.png"
 import CheatsheetIcon from "../assets/hooks-cheatsheet.png"
@@ -55,5 +56,12 @@ export const workItemsData: WorkItemsDataItem[] = [
 		title: 'drift',
 		subTitle: 'React and Node chat app with AES Encryption.',
 		link: 'https://github.com/daxter-army/drift'
+	},
+	{
+		id: 6,
+		logoSrc: RbtIcon,
+		title: 'react-beautiful-tooltip',
+		subTitle: 'A React Tooltip component for your beautiful React applications.',
+		link: 'https://daxter-army.github.io/react-beautiful-tooltip/'
 	},
 ]
