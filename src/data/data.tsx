@@ -1,10 +1,11 @@
 import RbcIcon from "../assets/rbc.png"
 import RbtIcon from "../assets/rbt.png"
+import RbdIcon from "../assets/rbd.png"
 import SimplIcon from "../assets/simpl.png"
 import DriftIcon from "../assets/drift.png"
-import CheatsheetIcon from "../assets/hooks-cheatsheet.png"
 import KeycastIcon from "../assets/keycast.png"
 import PyscrollIcon from "../assets/pyscroll.png"
+import CheatsheetIcon from "../assets/hooks-cheatsheet.png"
 
 interface WorkItemsDataItem {
 	id: number;
@@ -30,7 +31,7 @@ export const workItemsData: WorkItemsDataItem[] = [
 		link: 'https://daxter-army.github.io/react-beautiful-calendar/'
 	},
 	{
-		id: 6,
+		id: 3,
 		logoSrc: PyscrollIcon,
 		title: 'pyscroll',
 		subTitle: 'Tired of scrolling the scroll wheel ? Leave your mouse, and grab an object to scroll any infinite screen of your fav app.',
@@ -41,7 +42,7 @@ export const workItemsData: WorkItemsDataItem[] = [
 		logoSrc: KeycastIcon,
 		title: 'key-cast',
 		subTitle: 'Cast your key presses and mouse clicks on the screen, while casting your favorite application on the screen. Better than the rest.',
-		link: 'https://daxter-army.github.io/keycast/'
+		link: 'https://daxter-army.github.io/key-cast/'
 	},
 	{
 		id: 5,
@@ -51,17 +52,24 @@ export const workItemsData: WorkItemsDataItem[] = [
 		link: 'https://daxter-army.github.io/react-hooks-cheatsheet/'
 	},
 	{
-		id: 3,
+		id: 6,
 		logoSrc: DriftIcon,
 		title: 'drift',
 		subTitle: 'React and Node chat app with AES Encryption.',
 		link: 'https://github.com/daxter-army/drift'
 	},
 	{
-		id: 6,
+		id: 7,
 		logoSrc: RbtIcon,
 		title: 'react-beautiful-tooltip',
 		subTitle: 'A React Tooltip component for your beautiful React applications.',
 		link: 'https://daxter-army.github.io/react-beautiful-tooltip/'
+	},
+	{
+		id: 8,
+		logoSrc: RbdIcon,
+		title: 'react-beautiful-dropdown',
+		subTitle: 'An accessible React + Typescript drop-down component with keyboard navigation.',
+		link: 'https://daxter-army.github.io/react-dropdown/'
 	},
 ]
