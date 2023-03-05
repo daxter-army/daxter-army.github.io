@@ -49,7 +49,7 @@ const Home = () => {
 						<span>Completed B.Tech in Computer Science from <a href="https://www.thapar.edu/">TIET, Patiala</a></span>
 					</p>
 					<p className='bullet'>
-						<strong className='year'>2022 to Present</strong>
+						<strong className='year'>2021 to Present</strong>
 						<span>SDE in <a href="https://www.makemytrip.com">MakeMyTrip</a></span>
 					</p>
 				</div>
