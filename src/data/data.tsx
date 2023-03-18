@@ -1,6 +1,7 @@
 import RbcIcon from "../assets/rbc.png"
 import RbtIcon from "../assets/rbt.png"
 import RbdIcon from "../assets/rbd.png"
+import LclIcon from "../assets/lcl.png"
 import SimplIcon from "../assets/simpl.png"
 import DriftIcon from "../assets/drift.png"
 import KeycastIcon from "../assets/keycast.png"
@@ -17,6 +18,13 @@ interface WorkItemsDataItem {
 
 export const workItemsData: WorkItemsDataItem[] = [
 	{
+		id: 9,
+		logoSrc: LclIcon,
+		title: 'component-library',
+		subTitle: 'A react + typescript + lerna + rollup component library, for managing & distributing your multi-version npm packages.',
+		link: 'https://www.github.com/daxter-army/component-library/'
+	},
+	{
 		id: 1,
 		logoSrc: SimplIcon,
 		title: 'simpl',
@@ -24,11 +32,11 @@ export const workItemsData: WorkItemsDataItem[] = [
 		link: 'https://daxter-army.github.io/simpl/'
 	},
 	{
-		id: 2,
-		logoSrc: RbcIcon,
-		title: 'react-beautiful-calendar',
-		subTitle: 'A beautiful react calendar component library for your beautiful react apps.',
-		link: 'https://daxter-army.github.io/react-beautiful-calendar/'
+		id: 8,
+		logoSrc: RbdIcon,
+		title: 'react-beautiful-dropdown',
+		subTitle: 'An accessible React + Typescript drop-down component with keyboard navigation.',
+		link: 'https://daxter-army.github.io/react-dropdown/'
 	},
 	{
 		id: 3,
@@ -66,10 +74,10 @@ export const workItemsData: WorkItemsDataItem[] = [
 		link: 'https://daxter-army.github.io/react-beautiful-tooltip/'
 	},
 	{
-		id: 8,
-		logoSrc: RbdIcon,
-		title: 'react-beautiful-dropdown',
-		subTitle: 'An accessible React + Typescript drop-down component with keyboard navigation.',
-		link: 'https://daxter-army.github.io/react-dropdown/'
+		id: 2,
+		logoSrc: RbcIcon,
+		title: 'react-beautiful-calendar',
+		subTitle: 'A beautiful react calendar component library for your beautiful react apps.',
+		link: 'https://daxter-army.github.io/react-beautiful-calendar/'
 	},
 ]

@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d119c50b.css",
-    "main.js": "/static/js/main.88936d1a.js",
+    "main.js": "/static/js/main.3e20bd61.js",
+    "static/media/lcl.png": "/static/media/lcl.9a0745173bf49fd22e14.png",
     "static/media/hooks-cheatsheet.png": "/static/media/hooks-cheatsheet.ff9680a3a8241ddd9775.png",
     "static/media/pyscroll.png": "/static/media/pyscroll.1cee73b5d1a59a8d4e55.png",
     "static/media/keycast.png": "/static/media/keycast.994522daac4445666f34.png",
@@ -9,10 +10,10 @@
     "static/media/nameDark.svg": "/static/media/nameDark.33ced1c378e2db7f45a0c96579677a1b.svg",
     "index.html": "/index.html",
     "main.d119c50b.css.map": "/static/css/main.d119c50b.css.map",
-    "main.88936d1a.js.map": "/static/js/main.88936d1a.js.map"
+    "main.3e20bd61.js.map": "/static/js/main.3e20bd61.js.map"
   },
   "entrypoints": [
     "static/css/main.d119c50b.css",
-    "static/js/main.88936d1a.js"
+    "static/js/main.3e20bd61.js"
   ]
 }
