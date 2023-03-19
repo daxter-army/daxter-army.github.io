@@ -25,18 +25,18 @@ export const workItemsData: WorkItemsDataItem[] = [
 		link: 'https://www.github.com/daxter-army/component-library/'
 	},
 	{
-		id: 1,
-		logoSrc: SimplIcon,
-		title: 'simpl',
-		subTitle: 'A simplified and minimalistic media player powered by ElectronJS, to carry out your dev process smoothly.',
-		link: 'https://daxter-army.github.io/simpl/'
-	},
-	{
 		id: 8,
 		logoSrc: RbdIcon,
 		title: 'react-beautiful-dropdown',
 		subTitle: 'An accessible React + Typescript drop-down component with keyboard navigation.',
 		link: 'https://daxter-army.github.io/react-dropdown/'
+	},
+	{
+		id: 1,
+		logoSrc: SimplIcon,
+		title: 'simpl',
+		subTitle: 'A simplified and minimalistic media player powered by ElectronJS, to carry out your dev process smoothly.',
+		link: 'https://daxter-army.github.io/simpl/'
 	},
 	{
 		id: 3,
