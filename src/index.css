@@ -6,6 +6,7 @@
 	--text-salutation-bg: #EFDECD;
 	--button-bg: #319795;
 	--text-social: #2C7A7B;
+	--btn-dark-bg: #8e44ad;
 }
 
 [data-theme='dark'] {
@@ -14,6 +15,7 @@
 	--text-salutation: #ffffff;
 	--text-social: #81E6D9;
 	--text-salutation-bg: #333333;
+	--btn-light-bg: #f6e58d;
 }
 
 * {
@@ -31,6 +33,17 @@
 
 button {
 	outline: none;
+}
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
 }
 
 a {
@@ -71,4 +84,16 @@ body {
 .containerMini {
 	width: 550px;
 	margin: 0px auto;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		padding: 0px 8px;
+	}
+
+	.containerMini {
+		width: 100%;
+		padding: 0px 8px;
+	}
 }

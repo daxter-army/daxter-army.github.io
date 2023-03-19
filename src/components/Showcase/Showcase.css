@@ -8,3 +8,14 @@
 	width: 400px;
 	margin-bottom: 16px;
 }
+
+@media only screen and (max-width: 768px) {
+	.showcaseWpr {
+		padding: 64px 0px;
+	}
+
+	.showcaseWpr img {
+		width: 60%;
+		margin-bottom: 0px;
+	}
+}
