@@ -10,7 +10,7 @@ interface ButtonProps {
 
 const Button = ({ btnClicker, text, rightIcon, isCenter = false, styles }: ButtonProps) => {
 	return (
-		<button className={`buttonWpr ${isCenter ? 'isCenter' : ''}`} style={styles} onClick={btnClicker}>
+		<button aria-label="action-button" className={`buttonWpr ${isCenter ? 'isCenter' : ''}`} style={styles} onClick={btnClicker}>
 			<span>
 				{text}
 			</span>

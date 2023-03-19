@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
 	return (
 		<SwitchTransition mode='out-in'>
 			<CSSTransition key={theme} nodeRef={btnRef} classNames='fade' timeout={250}>
-				<button ref={btnRef} className='themeBtn' onClick={() => themeClicker(theme === 'light' ? 'dark' : 'light')}>
+				<button aria-label='theme-changing-button' ref={btnRef} className='themeBtn' onClick={() => themeClicker(theme === 'light' ? 'dark' : 'light')}>
 					{theme === 'light' ? <BsMoonFill /> : <BsSun />}
 				</button>
 			</CSSTransition>
