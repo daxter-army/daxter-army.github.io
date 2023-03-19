@@ -82,3 +82,23 @@
 	height: 120px;
 	border-radius: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+	.HomeWpr .intro {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	.HomeWpr .intro h1 {
+		font-size: 28px;
+		margin-top: 12px;
+	}
+
+	.HomeWpr .introSalutation {
+		width: 90%;
+		text-align: center;
+	}
+}

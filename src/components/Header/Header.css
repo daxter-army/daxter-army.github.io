@@ -55,3 +55,9 @@
 .HeaderWpr .titleWpr:hover {
 	text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+	.HeaderWpr .title {
+		display: none;
+	}
+}
