@@ -26,6 +26,14 @@
 	/* font-family: 'Staatliches', sans-serif; */
 }
 
+.HomeWpr .info ul {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	column-gap: 20px;
+	row-gap: 8px;
+}
+
 .HomeWpr .info .year {
 	margin-right: 24px;
 	font-family: 'Courier New', Courier, monospace;

@@ -54,6 +54,20 @@ const Home = () => {
 					</p>
 				</div>
 				<div className='info'>
+					<h2>Skills/Tools</h2>
+					<ul>
+						<li>C++</li>
+						<li>Python</li>
+						<li>React.JS</li>
+						<li>Redux (react-redux)</li>
+						<li>React Native</li>
+						<li>Typescript</li>
+						<li>Node.JS</li>
+						<li>Javascript</li>
+						<li>Git</li>
+					</ul>
+				</div>
+				<div className='info'>
 					<h2>I ♥</h2>
 					<p className='desc'>I like Art, Music, Video Games, Sudoku, Photography, playing Musical Keyboard, Machine Learning</p>
 				</div>
