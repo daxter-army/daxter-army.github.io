@@ -6,6 +6,7 @@ import SimplIcon from "../assets/simpl.png"
 import DriftIcon from "../assets/drift.png"
 import KeycastIcon from "../assets/keycast.png"
 import PyscrollIcon from "../assets/pyscroll.png"
+import ReactCPPWasmIcon from "../assets/rcppwasm.png"
 import CheatsheetIcon from "../assets/hooks-cheatsheet.png"
 
 interface WorkItemsDataItem {
@@ -23,6 +24,13 @@ export const workItemsData: WorkItemsDataItem[] = [
 		title: 'component-library',
 		subTitle: 'A react + typescript + lerna + rollup component library, for managing & distributing your multi-version npm packages.',
 		link: 'https://www.github.com/daxter-army/component-library/'
+	},
+	{
+		id: 10,
+		logoSrc: ReactCPPWasmIcon,
+		title: 'react-c++-wasm-todo-app',
+		subTitle: 'A react + cpp + wasm todo app, highlighting upon the toolchain and the integration of wasm with a react app.',
+		link: 'https://www.daxter-army.github.io/react-cpp-wasm-app/'
 	},
 	{
 		id: 8,
