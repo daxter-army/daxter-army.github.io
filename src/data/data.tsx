@@ -30,7 +30,7 @@ export const workItemsData: WorkItemsDataItem[] = [
 		logoSrc: ReactCPPWasmIcon,
 		title: 'react-cpp-wasm-todo-app',
 		subTitle: 'A react + cpp + wasm todo app, highlighting upon the toolchain and the integration of wasm with a react app.',
-		link: 'https://daxter-army.github.io/react-cpp-wasm-app/
+		link: 'https://daxter-army.github.io/react-cpp-wasm-app/'
 	},
 	{
 		id: 8,

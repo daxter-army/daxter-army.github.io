@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.22b65a70.css",
-    "main.js": "/static/js/main.5dbb5151.js",
+    "main.js": "/static/js/main.35a88267.js",
     "static/css/955.7b2722c5.chunk.css": "/static/css/955.7b2722c5.chunk.css",
     "static/js/955.227c69a9.chunk.js": "/static/js/955.227c69a9.chunk.js",
     "static/css/930.26b089a3.chunk.css": "/static/css/930.26b089a3.chunk.css",
-    "static/js/930.842756ea.chunk.js": "/static/js/930.842756ea.chunk.js",
+    "static/js/930.014f8ad4.chunk.js": "/static/js/930.014f8ad4.chunk.js",
     "static/js/692.46968edb.chunk.js": "/static/js/692.46968edb.chunk.js",
-    "static/media/rcppwasm.png": "/static/media/rcppwasm.faa1c347df1b66bc83da.png",
+    "static/media/rcppwasm.png": "/static/media/rcppwasm.d08e92f51022cc383c5a.png",
     "static/media/lcl.png": "/static/media/lcl.9a0745173bf49fd22e14.png",
     "static/media/hooks-cheatsheet.png": "/static/media/hooks-cheatsheet.ff9680a3a8241ddd9775.png",
     "static/media/pyscroll.png": "/static/media/pyscroll.1cee73b5d1a59a8d4e55.png",
@@ -16,15 +16,15 @@
     "static/media/nameDark.svg": "/static/media/nameDark.33ced1c378e2db7f45a0c96579677a1b.svg",
     "index.html": "/index.html",
     "main.22b65a70.css.map": "/static/css/main.22b65a70.css.map",
-    "main.5dbb5151.js.map": "/static/js/main.5dbb5151.js.map",
+    "main.35a88267.js.map": "/static/js/main.35a88267.js.map",
     "955.7b2722c5.chunk.css.map": "/static/css/955.7b2722c5.chunk.css.map",
     "955.227c69a9.chunk.js.map": "/static/js/955.227c69a9.chunk.js.map",
     "930.26b089a3.chunk.css.map": "/static/css/930.26b089a3.chunk.css.map",
-    "930.842756ea.chunk.js.map": "/static/js/930.842756ea.chunk.js.map",
+    "930.014f8ad4.chunk.js.map": "/static/js/930.014f8ad4.chunk.js.map",
     "692.46968edb.chunk.js.map": "/static/js/692.46968edb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.22b65a70.css",
-    "static/js/main.5dbb5151.js"
+    "static/js/main.35a88267.js"
   ]
 }
