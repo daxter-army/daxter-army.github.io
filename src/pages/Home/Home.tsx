@@ -21,7 +21,7 @@ const Home = () => {
 				<div className='intro'>
 					<div>
 						<h1>Mehul Singh Teya</h1>
-						<p>Craftsman (Developer / Artist / Designer)</p>
+						<p>Craftsman (Developer / Artist)</p>
 					</div>
 					<img src="https://avatars.githubusercontent.com/u/49727032?v=4" alt="logo" loading='lazy' />
 				</div>
@@ -32,10 +32,10 @@ const Home = () => {
 				<Button styles={{ marginTop: 20, marginBottom: 20 }} text="My Portfolio" isCenter={true} btnClicker={() => { navigate('/works') }} rightIcon={<BiChevronRight style={{ marginLeft: 4 }} />} />
 				<div className='info'>
 					<h2>Bio</h2>
-					<p className='bullet'>
+{/* 					<p className='bullet'>
 						<strong className='year'>2000</strong>
 						<span>Born in New Delhi, India</span>
-					</p>
+					</p> */}
 					<p className='bullet'>
 						<strong className='year'>2016</strong>
 						<span>Completed Xth Standard, 10CGPA</span>
@@ -49,8 +49,12 @@ const Home = () => {
 						<span>Completed B.Tech in Computer Science from <a href="https://www.thapar.edu/">TIET, Patiala</a></span>
 					</p>
 					<p className='bullet'>
-						<strong className='year'>2021 to Present</strong>
+						<strong className='year'>2021 to 2023</strong>
 						<span>SDE in <a href="https://www.makemytrip.com">MakeMyTrip</a></span>
+					</p>
+					<p className='bullet'>
+						<strong className='year'>2023 to Present</strong>
+						<span>SDE in <a href="https://www.paytmmoney.com">Paytm Money</a></span>
 					</p>
 				</div>
 				<div className='info'>
