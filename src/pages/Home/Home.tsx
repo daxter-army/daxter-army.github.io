@@ -49,13 +49,13 @@ const Home = () => {
 						<span>Completed B.Tech in Computer Science from <a href="https://www.thapar.edu/">TIET, Patiala</a></span>
 					</p>
 					<p className='bullet'>
-						<strong className='year'>2021 to 2023</strong>
+						<strong className='year'>2021 to Present</strong>
 						<span>SDE in <a href="https://www.makemytrip.com">MakeMyTrip</a></span>
 					</p>
-					<p className='bullet'>
+					{/* <p className='bullet'>
 						<strong className='year'>2023 to Present</strong>
 						<span>SDE in <a href="https://www.paytmmoney.com">Paytm Money</a></span>
-					</p>
+					</p> */}
 				</div>
 				<div className='info'>
 					<h2>Skills/Tools</h2>
