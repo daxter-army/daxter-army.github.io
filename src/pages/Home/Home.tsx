@@ -12,6 +12,10 @@ const Home = () => {
   const navigate = useNavigate();
   // const { theme } = useContext(themeContext)
 
+  const portfolioHandler = () => {
+    navigate("/works");
+  };
+
   return (
     <div className="HomeWpr">
       <Showcase />
@@ -35,11 +39,9 @@ const Home = () => {
         </div>
         <Button
           styles={{ marginTop: 20, marginBottom: 20 }}
-          text="My Portfolio"
           isCenter={true}
-          btnClicker={() => {
-            navigate("/works");
-          }}
+          text="My Portfolio"
+          btnClicker={portfolioHandler}
           rightIcon={<BiChevronRight style={{ marginLeft: 4 }} />}
         />
         <div className="info">
