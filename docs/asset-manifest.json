@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.c448ae57.css",
-    "main.js": "/static/js/main.3abd782a.js",
+    "main.css": "/static/css/main.f79d5aa4.css",
+    "main.js": "/static/js/main.cefafcb4.js",
     "static/css/42.ae19bbf6.chunk.css": "/static/css/42.ae19bbf6.chunk.css",
     "static/js/42.8dac3387.chunk.js": "/static/js/42.8dac3387.chunk.js",
     "static/css/972.30056bd8.chunk.css": "/static/css/972.30056bd8.chunk.css",
     "static/js/972.a861e93e.chunk.js": "/static/js/972.a861e93e.chunk.js",
-    "static/js/692.46968edb.chunk.js": "/static/js/692.46968edb.chunk.js",
+    "static/js/224.ab8a6bc2.chunk.js": "/static/js/224.ab8a6bc2.chunk.js",
     "static/media/lcl.webp": "/static/media/lcl.2dcc1dbb51a7c7d337b2.webp",
     "static/media/rcppwasm.webp": "/static/media/rcppwasm.f1f0b2960ee628746172.webp",
     "static/media/hooks-cheatsheet.webp": "/static/media/hooks-cheatsheet.063352be03e8f5b69d29.webp",
@@ -20,16 +20,16 @@
     "static/media/name.svg": "/static/media/name.4389e42a538a521cd4cd360ddee4de50.svg",
     "static/media/nameDark.svg": "/static/media/nameDark.33ced1c378e2db7f45a0c96579677a1b.svg",
     "index.html": "/index.html",
-    "main.c448ae57.css.map": "/static/css/main.c448ae57.css.map",
-    "main.3abd782a.js.map": "/static/js/main.3abd782a.js.map",
+    "main.f79d5aa4.css.map": "/static/css/main.f79d5aa4.css.map",
+    "main.cefafcb4.js.map": "/static/js/main.cefafcb4.js.map",
     "42.ae19bbf6.chunk.css.map": "/static/css/42.ae19bbf6.chunk.css.map",
     "42.8dac3387.chunk.js.map": "/static/js/42.8dac3387.chunk.js.map",
     "972.30056bd8.chunk.css.map": "/static/css/972.30056bd8.chunk.css.map",
     "972.a861e93e.chunk.js.map": "/static/js/972.a861e93e.chunk.js.map",
-    "692.46968edb.chunk.js.map": "/static/js/692.46968edb.chunk.js.map"
+    "224.ab8a6bc2.chunk.js.map": "/static/js/224.ab8a6bc2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c448ae57.css",
-    "static/js/main.3abd782a.js"
+    "static/css/main.f79d5aa4.css",
+    "static/js/main.cefafcb4.js"
   ]
 }

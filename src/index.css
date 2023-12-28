@@ -69,7 +69,7 @@ a:hover {
 }
 
 body {
-  /* font-family: 'DM Sans', sans-serif; */
+  font-family: "DM Sans", sans-serif;
   background-color: var(--background);
   color: var(--text-primary);
   transition: all 0.2s;

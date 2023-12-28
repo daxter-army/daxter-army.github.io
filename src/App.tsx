@@ -31,7 +31,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme: theme, themeClicker: themeHandler }}>
       <HashRouter>
-        <Header />
+        {/* <Header /> */}
         <Routes>
           <Route
             path="/"
