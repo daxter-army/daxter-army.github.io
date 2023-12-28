@@ -14,15 +14,7 @@ const Works = () => {
         <h2 className="sectionHeading">{STATICS.WORKS}</h2>
         <div className="projectsCtr">
           {workItemsData.map((item) => {
-            return (
-              <WorkItem
-                key={item.id}
-                link={item.link}
-                title={item.title}
-                logoSrc={item.logoSrc}
-                subTitle={item.subTitle}
-              />
-            );
+            return <WorkItem key={item.id} {...item} />;
           })}
         </div>
       </div>

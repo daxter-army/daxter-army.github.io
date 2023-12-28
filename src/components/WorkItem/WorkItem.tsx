@@ -1,19 +1,19 @@
+import { WorkItemsDataItem } from "../../data/data";
+
 import "./WorkItem.css";
 
-interface WorkItemProps {
-  logoSrc: string;
-  title: string;
-  subTitle?: string;
-  link: string;
-}
-
-const WorkItem = ({ logoSrc, title, subTitle, link }: WorkItemProps) => {
-  console.log(logoSrc);
+const WorkItem = ({
+  logoSrc,
+  logoSrcSet,
+  title,
+  subTitle,
+  link,
+}: WorkItemsDataItem) => {
   return (
     <a href={link} className="WorkItemWpr" target={"_blank"} rel="noreferrer">
       {logoSrc && (
         <div className="imgWpr">
-          <img src={logoSrc} alt="project-logo" />
+          <img srcSet={logoSrcSet} src={logoSrc} alt="project-logo" />
         </div>
       )}
       {title && <p className="title">{title}</p>}
