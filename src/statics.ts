@@ -1,6 +1,8 @@
 export const STATICS = {
   LINKED_URL: "https://www.linkedin.com/in/mehulsinghteya",
   GITHUB_URL: "https://www.github.com/daxter-army",
+  GITHUB_REPO_URL: "https://www.github.com/daxter-army/daxter-army.github.io",
+  ICON_URL: "https://daxter-army.github.io/daxUI/static/media/m.e08629e9.svg",
   INTRO: "Hello!, I am a Software Engineer, working as a Professional in India",
   NAME: "Mehul Singh Teya",
   BIO: "Craftsman (Developer/Artist)",
@@ -15,4 +17,5 @@ export const STATICS = {
   THAPAR_URL: "https://www.thapar.edu/",
   WORKS: "Works",
   FOOTER_TEXT: "Mehul Singh Teya. All Rights Reserved",
+  AUTHOR_NAME: "Mehul Singh Teya",
 };

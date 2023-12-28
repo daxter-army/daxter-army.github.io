@@ -1,63 +1,62 @@
 .HeaderWpr {
-	padding: 8px 0px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	/* border-bottom: 1px #badc58 solid; */
+  padding: 8px 0px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .HeaderWpr .container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .HeaderWpr .leftInfo {
-	display: flex;
-	align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 }
 
 .HeaderWpr .nameLogoWpr {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .HeaderWpr .leftInfo img {
-	width: 28px;
-	height: 28px;
-	margin-right: 4px;
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
 }
 
 .HeaderWpr nav {
-	margin-left: 16px;
-	display: flex;
-	/* align-items: center; */
+  margin-left: 16px;
+  display: flex;
 }
 
 .HeaderWpr nav a:not(:last-child) {
-	color: var(--text-primary);
-	margin-right: 14px;
+  color: var(--text-primary);
+  margin-right: 14px;
 }
 
 .HeaderWpr .titleWpr {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .HeaderWpr .title {
-	font-size: 30px;
-	line-height: 32px;
-	text-decoration: none;
-	color: var(--text-primary);
-	font-family: 'Staatliches', cursive;
+  font-size: 30px;
+  line-height: 32px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-family: "Staatliches", cursive, sans-serif;
 }
 
 .HeaderWpr .titleWpr:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 768px) {
-	.HeaderWpr .title {
-		display: none;
-	}
+  .HeaderWpr .title {
+    display: none;
+  }
 }

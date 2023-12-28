@@ -5,9 +5,9 @@ import Button from "../../components/Button/Button";
 import Showcase from "../../components/Showcase/Showcase";
 
 import { STATICS } from "../../statics";
+import { skillItemsData } from "../../data/data";
 
 import "./Home.css";
-import { skillItemsData } from "../../data/data";
 
 const Home = () => {
   const navigate = useNavigate();

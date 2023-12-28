@@ -4,9 +4,10 @@
   --text-primary: #111111;
   --text-salutation: #3e2726;
   --text-salutation-bg: #efdecd;
-  --button-bg: #319795;
+  --button-bg: #54cac6;
   --text-social: #2c7a7b;
   --btn-dark-bg: #8e44ad;
+  --footer-text: #404040;
 }
 
 [data-theme="dark"] {
@@ -16,6 +17,7 @@
   --text-social: #81e6d9;
   --text-salutation-bg: #333333;
   --btn-light-bg: #f6e58d;
+  --footer-text: #b5b5b5;
 }
 
 * {
