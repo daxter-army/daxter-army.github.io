@@ -1,19 +1,24 @@
-import { useContext } from "react"
+import { useContext } from "react";
 import themeContext from "../../context/theme";
 
-import NameSVG from '../../assets/name.svg';
-import NameSVGDark from '../../assets/nameDark.svg';
+import NameSVG from "../../assets/name.svg";
+import NameSVGDark from "../../assets/nameDark.svg";
 
-import "./Showcase.css"
+import "./Showcase.css";
 
 const Showcase = () => {
-	const { theme } = useContext(themeContext)
+  const { theme } = useContext(themeContext);
 
-	return (
-		<div className='showcaseWpr'>
-			<img src={theme === 'dark' ? NameSVGDark : NameSVG} alt="name-logo" />
-		</div>
-	)
-}
+  return (
+    <div className="showcaseWpr">
+      <img
+        width={400}
+        height={97}
+        alt="name-logo"
+        src={theme === "dark" ? NameSVGDark : NameSVG}
+      />
+    </div>
+  );
+};
 
-export default Showcase
+export default Showcase;

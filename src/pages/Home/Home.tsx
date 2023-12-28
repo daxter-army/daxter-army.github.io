@@ -10,7 +10,6 @@ import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
-  // const { theme } = useContext(themeContext)
 
   const portfolioHandler = () => {
     navigate("/works");

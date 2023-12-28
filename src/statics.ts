@@ -13,4 +13,5 @@ export const STATICS = {
     "Mehul Singh Teya, is a Software Engineer with passion of building stuffs and services he likes. He likes to build projects, that not only can help others, but also eases his own daily life. When not online, he likes to play minesweeper, solve Sudoku and play musical keyboard.",
   PRESENT_SITUATION: "Currently, he is working as SDE in India.",
   THAPAR_URL: "https://www.thapar.edu/",
+  WORKS: "Works",
 };
