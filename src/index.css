@@ -56,6 +56,11 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 .iconLink {
   display: flex;
   gap: 4px;

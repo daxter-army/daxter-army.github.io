@@ -1,4 +1,5 @@
 import { useContext } from "react";
+
 import themeContext from "../../context/theme";
 
 import NameSVG from "../../assets/name.svg";
@@ -11,12 +12,7 @@ const Showcase = () => {
 
   return (
     <div className="showcaseWpr">
-      <img
-        width={400}
-        height={97}
-        alt="name-logo"
-        src={theme === "dark" ? NameSVGDark : NameSVG}
-      />
+      <img alt="name logo" src={theme === "dark" ? NameSVGDark : NameSVG} />
     </div>
   );
 };

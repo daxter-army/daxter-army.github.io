@@ -8,11 +8,12 @@ interface WorkItemProps {
 }
 
 const WorkItem = ({ logoSrc, title, subTitle, link }: WorkItemProps) => {
+  console.log(logoSrc);
   return (
     <a href={link} className="WorkItemWpr" target={"_blank"} rel="noreferrer">
       {logoSrc && (
         <div className="imgWpr">
-          <img width={255} height={144} src={logoSrc} alt="project-logo" />
+          <img src={logoSrc} alt="project-logo" />
         </div>
       )}
       {title && <p className="title">{title}</p>}

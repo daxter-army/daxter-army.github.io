@@ -1,22 +1,23 @@
 .showcaseWpr {
-  padding: 160px 0px 20px 0px;
+  width: 400px;
+  margin: 120px auto 20px;
   display: flex;
   justify-content: center;
 }
 
 .showcaseWpr img {
-  width: 400px;
-  height: 97px;
   margin-bottom: 16px;
+  aspect-ratio: 400 / 97;
 }
 
 @media only screen and (max-width: 768px) {
   .showcaseWpr {
-    padding: 64px 0px;
+    width: 100%;
+    margin: 64px 0px;
   }
 
   .showcaseWpr img {
-    width: 60%;
+    width: 65%;
     margin-bottom: 0px;
   }
 }

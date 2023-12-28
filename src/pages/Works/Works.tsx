@@ -16,9 +16,10 @@ const Works = () => {
           {workItemsData.map((item) => {
             return (
               <WorkItem
-                logoSrc={item.logoSrc}
+                key={item.id}
                 link={item.link}
                 title={item.title}
+                logoSrc={item.logoSrc}
                 subTitle={item.subTitle}
               />
             );
