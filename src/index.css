@@ -1,99 +1,98 @@
 /* COLORS FOR THEME */
 :root {
-	--background: #FCEDDA;
-	--text-primary: #111111;
-	--text-salutation: #3E2726;
-	--text-salutation-bg: #EFDECD;
-	--button-bg: #319795;
-	--text-social: #2C7A7B;
-	--btn-dark-bg: #8e44ad;
+  --background: #fcedda;
+  --text-primary: #111111;
+  --text-salutation: #3e2726;
+  --text-salutation-bg: #efdecd;
+  --button-bg: #319795;
+  --text-social: #2c7a7b;
+  --btn-dark-bg: #8e44ad;
 }
 
-[data-theme='dark'] {
-	--background: #222222;
-	--text-primary: #ffffff;
-	--text-salutation: #ffffff;
-	--text-social: #81E6D9;
-	--text-salutation-bg: #333333;
-	--btn-light-bg: #f6e58d;
+[data-theme="dark"] {
+  --background: #222222;
+  --text-primary: #ffffff;
+  --text-salutation: #ffffff;
+  --text-social: #81e6d9;
+  --text-salutation-bg: #333333;
+  --btn-light-bg: #f6e58d;
 }
 
 * {
-	padding: 0px;
-	margin: 0px;
-	box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-	-webkit-tap-highlight-color: #000000;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: #000000;
 }
 
 button {
-	outline: none;
+  outline: none;
 }
 
 html,
 body,
 #root {
-	height: 100%;
+  height: 100%;
 }
 
 #root {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 .iconLink {
-	display: flex;
-	gap: 4px;
-	align-items: center;
+  display: flex;
+  gap: 4px;
+  align-items: center;
 }
 
-[data-theme='dark'] a {
-	color: #008CFF;
+[data-theme="dark"] a {
+  color: #008cff;
 }
 
-
-[data-theme='dark'] a:visited {
-	color: #6C5CE7;
+[data-theme="dark"] a:visited {
+  color: #6c5ce7;
 }
 
 body {
-	font-family: 'DM Sans', sans-serif;
-	background-color: var(--background);
-	color: var(--text-primary);
-	transition: all 0.2s;
+  /* font-family: 'DM Sans', sans-serif; */
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: all 0.2s;
 }
 
 .container {
-	width: 768px;
-	margin: 0px auto;
+  width: 768px;
+  margin: 0px auto;
 }
 
 .containerMini {
-	width: 550px;
-	margin: 0px auto;
+  width: 550px;
+  margin: 0px auto;
 }
 
 @media only screen and (max-width: 768px) {
-	.container {
-		width: 100%;
-		padding: 0px 8px;
-	}
+  .container {
+    width: 100%;
+    padding: 0px 8px;
+  }
 
-	.containerMini {
-		width: 100%;
-		padding: 0px 16px;
-	}
+  .containerMini {
+    width: 100%;
+    padding: 0px 16px;
+  }
 }
