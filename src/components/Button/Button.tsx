@@ -1,28 +1,28 @@
 import "./Button.css";
 
 interface ButtonProps {
-  btnClicker: () => void;
   text: string;
-  rightIcon: JSX.Element;
   isCenter?: boolean;
+  btnClicker: () => void;
+  rightIcon: JSX.Element;
   styles?: React.CSSProperties;
 }
 
 const Button = ({
-  btnClicker,
   text,
-  rightIcon,
-  isCenter = false,
   styles,
+  rightIcon,
+  btnClicker,
+  isCenter = false,
 }: ButtonProps) => {
   return (
     <button
-      aria-label={text}
-      className={`buttonWpr ${isCenter ? "isCenter" : ""}`}
       style={styles}
+      aria-label={text}
       onClick={btnClicker}
+      className={`buttonWpr ${isCenter ? "isCenter" : ""}`}
     >
-      <span>{text}</span>
+      {text && <span>{text}</span>}
       {rightIcon}
     </button>
   );

@@ -18,4 +18,6 @@ export const STATICS = {
   WORKS: "Works",
   FOOTER_TEXT: "Mehul Singh Teya. All Rights Reserved",
   AUTHOR_NAME: "Mehul Singh Teya",
+  LIGHT_THEME_MODE: "light",
+  DARK_THEME_MODE: "dark",
 };

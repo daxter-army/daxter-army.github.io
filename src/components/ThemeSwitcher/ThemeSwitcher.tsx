@@ -1,28 +1,45 @@
-import React, { useRef, useContext } from 'react'
-import { BsMoonFill, BsSun } from "react-icons/bs"
-import { SwitchTransition, CSSTransition } from 'react-transition-group'
+import { useRef } from "react";
+import { BsMoonFill, BsSun } from "react-icons/bs";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 
-import themeContext from '../../context/theme'
+import { STATICS } from "../../statics";
+import { useTheme } from "../../context/theme";
 
-import './ThemeSwitcher.css'
+import "./ThemeSwitcher.css";
 
 const ThemeSwitcher = () => {
-	const lightBtnRef = useRef(null)
-	const darkBtnRef = useRef(null)
+  const darkBtnRef = useRef(null);
+  const lightBtnRef = useRef(null);
+  const { theme, themeHandler, isLightTheme } = useTheme();
+  const btnRef = isLightTheme ? lightBtnRef : darkBtnRef;
 
-	const { theme, themeClicker } = useContext(themeContext)
+  const buttonIconComponent = isLightTheme ? <BsMoonFill /> : <BsSun />;
 
-	const btnRef = theme === 'light' ? lightBtnRef : darkBtnRef
+  const themeButtonHandler = () => {
+    themeHandler(
+      isLightTheme ? STATICS.DARK_THEME_MODE : STATICS.LIGHT_THEME_MODE
+    );
+  };
 
-	return (
-		<SwitchTransition mode='out-in'>
-			<CSSTransition key={theme} nodeRef={btnRef} classNames='fade' timeout={250}>
-				<button aria-label='theme-changing-button' ref={btnRef} className='themeBtn' onClick={() => themeClicker(theme === 'light' ? 'dark' : 'light')}>
-					{theme === 'light' ? <BsMoonFill /> : <BsSun />}
-				</button>
-			</CSSTransition>
-		</SwitchTransition>
-	)
-}
+  return (
+    <SwitchTransition mode="out-in">
+      <CSSTransition
+        key={theme}
+        timeout={250}
+        nodeRef={btnRef}
+        classNames="fade"
+      >
+        <button
+          ref={btnRef}
+          className="themeBtn"
+          onClick={themeButtonHandler}
+          aria-label="theme changing button"
+        >
+          {buttonIconComponent}
+        </button>
+      </CSSTransition>
+    </SwitchTransition>
+  );
+};
 
-export default ThemeSwitcher
+export default ThemeSwitcher;

@@ -1,13 +1,19 @@
-import { createContext } from "react";
+import { createContext, useContext } from "react";
+
+import { STATICS } from "../statics";
 
 interface themeContextProps {
-	theme: string;
-	themeClicker: (theme: string) => void
+  theme: string;
+  isLightTheme: boolean;
+  themeHandler: (theme: string) => void;
 }
 
 const themeContext = createContext<themeContextProps>({
-	theme: 'light',
-	themeClicker: () => { }
-})
+  theme: STATICS.LIGHT_THEME_MODE,
+  isLightTheme: true,
+  themeHandler: () => {},
+});
 
-export default themeContext
+export const useTheme = () => useContext(themeContext);
+
+export default themeContext;

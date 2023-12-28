@@ -13,9 +13,9 @@ const Works = () => {
       <div className="containerMini">
         <h2 className="sectionHeading">{STATICS.WORKS}</h2>
         <div className="projectsCtr">
-          {workItemsData.map((item) => {
-            return <WorkItem key={item.id} {...item} />;
-          })}
+          {workItemsData.map((item) => (
+            <WorkItem key={item.id} {...item} />
+          ))}
         </div>
       </div>
     </div>

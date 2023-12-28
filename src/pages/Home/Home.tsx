@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { BiChevronRight } from "react-icons/bi";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+
 import Button from "../../components/Button/Button";
 import Showcase from "../../components/Showcase/Showcase";
 
@@ -27,9 +28,9 @@ const Home = () => {
             <p>{STATICS.BIO}</p>
           </div>
           <img
-            alt="logo"
             width={120}
             height={120}
+            alt="avataar"
             src={STATICS.GITHUB_AVATAAR_URL}
           />
         </div>

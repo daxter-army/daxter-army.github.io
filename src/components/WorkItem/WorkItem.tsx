@@ -13,7 +13,7 @@ const WorkItem = ({
     <a href={link} className="WorkItemWpr" target={"_blank"} rel="noreferrer">
       {logoSrc && (
         <div className="imgWpr">
-          <img srcSet={logoSrcSet} src={logoSrc} alt="project-logo" />
+          <img srcSet={logoSrcSet} src={logoSrc} alt="project logo" />
         </div>
       )}
       {title && <p className="title">{title}</p>}
