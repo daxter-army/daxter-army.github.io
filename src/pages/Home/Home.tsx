@@ -7,6 +7,7 @@ import Showcase from "../../components/Showcase/Showcase";
 import { STATICS } from "../../statics";
 
 import "./Home.css";
+import { skillItemsData } from "../../data/data";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -25,7 +26,12 @@ const Home = () => {
             <h1>{STATICS.NAME}</h1>
             <p>{STATICS.BIO}</p>
           </div>
-          <img src={STATICS.GITHUB_AVATAAR_URL} alt="logo" loading="lazy" />
+          <img
+            alt="logo"
+            width={120}
+            height={120}
+            src={STATICS.GITHUB_AVATAAR_URL}
+          />
         </div>
         <div className="info">
           <h2>About</h2>
@@ -37,18 +43,14 @@ const Home = () => {
           </p>
         </div>
         <Button
-          styles={{ marginTop: 20, marginBottom: 20 }}
           isCenter={true}
           text="My Portfolio"
           btnClicker={portfolioHandler}
+          styles={{ marginTop: 20, marginBottom: 20 }}
           rightIcon={<BiChevronRight style={{ marginLeft: 4 }} />}
         />
         <div className="info">
           <h2>Bio</h2>
-          {/* <p className='bullet'>
-						<strong className='year'>2000</strong>
-						<span>Born in New Delhi, India</span>
-					</p> */}
           <p className="bullet">
             <strong className="year">2016</strong>
             <span>Completed Xth Standard, 10CGPA</span>
@@ -68,31 +70,13 @@ const Home = () => {
             <strong className="year">2022 to Present</strong>
             <span>Working as a Professional in India</span>
           </p>
-          {/* <p className="bullet">
-            <strong className="year">2021 to 2023</strong>
-            <span>
-              SDE in <a href="https://www.makemytrip.com">MakeMyTrip</a>
-            </span>
-          </p>
-          <p className="bullet">
-            <strong className="year">2023 to Present</strong>
-            <span>
-              SDE in <a href="https://www.zomato.com">Zomato</a>
-            </span>
-          </p> */}
         </div>
         <div className="info">
           <h2>Skills/Tools</h2>
           <ul>
-            <li>C++</li>
-            <li>Python</li>
-            <li>React.JS</li>
-            <li>Redux (react-redux)</li>
-            <li>React Native</li>
-            <li>Typescript</li>
-            <li>Node.JS</li>
-            <li>Javascript</li>
-            <li>Git</li>
+            {skillItemsData.map((skill) => (
+              <li key={skill.id}>{skill.label}</li>
+            ))}
           </ul>
         </div>
         <div className="info">

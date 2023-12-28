@@ -14,4 +14,5 @@ export const STATICS = {
   PRESENT_SITUATION: "Currently, he is working as SDE in India.",
   THAPAR_URL: "https://www.thapar.edu/",
   WORKS: "Works",
+  FOOTER_TEXT: "Mehul Singh Teya. All Rights Reserved",
 };

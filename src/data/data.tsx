@@ -17,6 +17,11 @@ interface WorkItemsDataItem {
   link: string;
 }
 
+interface SkillItemsDataItem {
+  id: number;
+  label: string;
+}
+
 export const workItemsData: WorkItemsDataItem[] = [
   {
     id: 1,
@@ -95,5 +100,44 @@ export const workItemsData: WorkItemsDataItem[] = [
     subTitle:
       "A beautiful react calendar component library for your beautiful react apps.",
     link: "https://daxter-army.github.io/react-beautiful-calendar/",
+  },
+];
+
+export const skillItemsData: SkillItemsDataItem[] = [
+  {
+    id: 1,
+    label: "C++",
+  },
+  {
+    id: 2,
+    label: "Python",
+  },
+  {
+    id: 3,
+    label: "React.JS",
+  },
+  {
+    id: 4,
+    label: "Redux (react-redux)",
+  },
+  {
+    id: 5,
+    label: "React Native",
+  },
+  {
+    id: 6,
+    label: "Typescript",
+  },
+  {
+    id: 7,
+    label: "Node.JS",
+  },
+  {
+    id: 8,
+    label: "Javascript",
+  },
+  {
+    id: 9,
+    label: "Git",
   },
 ];

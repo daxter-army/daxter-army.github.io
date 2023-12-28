@@ -1,9 +1,13 @@
-import "./Footer.css"
+import { STATICS } from "../../statics";
+
+import "./Footer.css";
 
 const Footer = () => {
-	return (
-		<footer>&#169;{`${new Date().getFullYear()}`} Mehul Singh Teya. All Rights Reserved</footer>
-	)
-}
+  return (
+    <footer>
+      &#169;{`${new Date().getFullYear()}`} {STATICS.FOOTER_TEXT}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
