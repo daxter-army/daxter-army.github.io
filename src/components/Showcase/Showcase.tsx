@@ -10,7 +10,11 @@ const Showcase = () => {
 
   return (
     <div className="showcaseWpr">
-      <img alt="name logo" src={isLightTheme ? NameSVG : NameSVGDark} />
+      <img
+        fetchpriority="high"
+        alt="name logo"
+        src={isLightTheme ? NameSVG : NameSVGDark}
+      />
     </div>
   );
 };
