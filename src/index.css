@@ -33,10 +33,6 @@
   -webkit-tap-highlight-color: #000000;
 }
 
-button {
-  outline: none;
-}
-
 html,
 body,
 #root {
