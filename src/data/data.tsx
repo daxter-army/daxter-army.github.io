@@ -95,7 +95,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     logoSrcSet: logoSrcSetGenerator(CheatsheetIcon1x, CheatsheetIcon2x),
     title: "hooks-cheatsheet",
     subTitle: "A React cheatsheet, going from beginners to advanced level.",
-    link: "https://daxter-army.github.io/react-hooks-cheatsheet/",
+    link: "https://github.com/daxter-army/react-hooks-cheatsheet",
   },
   {
     id: 8,
@@ -140,26 +140,38 @@ export const skillItemsData: SkillItemsDataItem[] = [
   },
   {
     id: 4,
-    label: "Redux (react-redux)",
+    label: "Next.JS",
   },
   {
     id: 5,
-    label: "React Native",
+    label: "Redux (react-redux)",
   },
   {
     id: 6,
-    label: "Typescript",
+    label: "Zustand",
   },
   {
     id: 7,
-    label: "Node.JS",
+    label: "React Native",
   },
   {
     id: 8,
-    label: "Javascript",
+    label: "Typescript",
   },
   {
     id: 9,
+    label: "Node.JS",
+  },
+  {
+    id: 10,
+    label: "Javascript",
+  },
+  {
+    id: 11,
+    label: "SEO (Structured data, sitemaps)",
+  },
+  {
+    id: 12,
     label: "Git",
   },
 ];
