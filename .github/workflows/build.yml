@@ -1,0 +1,44 @@
+name: Build Docs on Main
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write   # allows the Action to push to the repo
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false  # use token for pushing
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Commit and push docs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add docs -f
+          if git diff --cached --quiet; then
+            echo "No changes in docs to commit."
+          else
+            git commit -m "chore: update built docs [skip ci]"
+            git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:main
+          fi
