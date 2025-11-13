@@ -1,4 +1,4 @@
-name: Build docs from on main branch
+name: Build /docs on main branch
 
 on:
   push:
