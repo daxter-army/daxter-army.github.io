@@ -1,4 +1,4 @@
-name: Build Docs on Main
+name: Build docs from on main branch
 
 on:
   push:
