@@ -128,50 +128,58 @@ export const workItemsData: WorkItemsDataItem[] = [
 export const skillItemsData: SkillItemsDataItem[] = [
   {
     id: 1,
-    label: "C++",
-  },
-  {
-    id: 2,
-    label: "Python",
-  },
-  {
-    id: 3,
-    label: "React.JS",
-  },
-  {
-    id: 4,
-    label: "Next.JS",
-  },
-  {
-    id: 5,
-    label: "Redux (react-redux)",
-  },
-  {
-    id: 6,
-    label: "Zustand",
-  },
-  {
-    id: 7,
-    label: "React Native",
-  },
-  {
-    id: 8,
-    label: "Typescript",
-  },
-  {
-    id: 9,
-    label: "Node.JS",
-  },
-  {
-    id: 10,
     label: "Javascript",
   },
   {
+    id: 2,
+    label: "C++",
+  },
+  {
+    id: 3,
+    label: "Python",
+  },
+  {
+    id: 4,
+    label: "React.JS",
+  },
+  {
+    id: 5,
+    label: "Next.JS",
+  },
+  {
+    id: 6,
+    label: "Redux (react-redux)",
+  },
+  {
+    id: 7,
+    label: "Zustand",
+  },
+  {
+    id: 8,
+    label: "React Native",
+  },
+  {
+    id: 9,
+    label: "Typescript",
+  },
+  {
+    id: 10,
+    label: "Golang",
+  },
+    {
     id: 11,
-    label: "SEO (Structured data, sitemaps)",
+    label: "Docker",
   },
   {
     id: 12,
+    label: "AWS",
+  },
+  {
+    id: 13,
+    label: "SEO (Structured data, sitemaps)",
+  },
+  {
+    id: 14,
     label: "Git",
   },
 ];

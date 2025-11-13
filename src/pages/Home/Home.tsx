@@ -45,7 +45,7 @@ const Home = () => {
         </div>
         <Button
           isCenter={true}
-          text="My Portfolio"
+          text="My Projects"
           btnClicker={portfolioHandler}
           styles={{ marginTop: 20, marginBottom: 20 }}
           rightIcon={<BiChevronRight style={{ marginLeft: 4 }} />}
@@ -64,7 +64,7 @@ const Home = () => {
             <strong className="year">2022</strong>
             <span>
               Completed B.Tech in Computer Science from{" "}
-              <a href={STATICS.THAPAR_URL}>TIET, Patiala</a>
+              <a href={STATICS.THAPAR_URL}>Thapar University (TIET), Patiala</a>
             </span>
           </p>
           <p className="bullet">
