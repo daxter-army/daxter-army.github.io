@@ -46,6 +46,11 @@ body,
 
 a {
   text-decoration: none;
+  color: #8e44ad;
+}
+
+a:visited {
+  color: #5a4bcf;
 }
 
 a:hover {
