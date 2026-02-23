@@ -54,11 +54,11 @@ const Home = () => {
           <h2>Bio</h2>
           <p className="bullet">
             <strong className="year">2016</strong>
-            <span>Completed Xth Standard, 10CGPA</span>
+            <span>Completed X<sup>th</sup> Standard, 10CGPA</span>
           </p>
           <p className="bullet">
             <strong className="year">2018</strong>
-            <span>Completed XIIth Standard, PCM, 91.6%</span>
+            <span>Completed XII<sup>th</sup> Standard, PCM, 91.6%</span>
           </p>
           <p className="bullet">
             <strong className="year">2022</strong>
