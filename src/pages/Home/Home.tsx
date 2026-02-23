@@ -18,7 +18,7 @@ const Home = () => {
   };
 
   return (
-    <div className="HomeWpr">
+    <main className="HomeWpr">
       <Showcase />
       <div className="containerMini">
         <p className="introSalutation">{STATICS.INTRO}</p>
@@ -108,7 +108,7 @@ const Home = () => {
           </nav>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

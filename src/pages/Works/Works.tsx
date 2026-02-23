@@ -8,7 +8,7 @@ import "./Works.css";
 
 const Works = () => {
   return (
-    <div className="WorksWpr">
+    <main className="WorksWpr">
       <Showcase />
       <div className="containerMini">
         <h2 className="sectionHeading">{STATICS.WORKS}</h2>
@@ -18,7 +18,7 @@ const Works = () => {
           ))}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
