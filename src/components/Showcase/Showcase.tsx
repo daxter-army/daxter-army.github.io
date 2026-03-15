@@ -11,6 +11,7 @@ const Showcase = () => {
       <img
         src={imgSrc}
         alt="name logo"
+        fetchpriority="high"
       />
     </div>
   );
