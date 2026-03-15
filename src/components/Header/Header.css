@@ -48,7 +48,7 @@
   line-height: 32px;
   text-decoration: none;
   color: var(--text-primary);
-  font-family: "Staatliches", cursive, sans-serif;
+  font-family: "Staatliches", "Arial Narrow", "Trebuchet MS", Tahoma, sans-serif;
 }
 
 .HeaderWpr .titleWpr:hover {
