@@ -3,7 +3,6 @@ import { useEffect, useState, lazy, Suspense, useMemo } from "react";
 
 import Loader from "./pages/Loader/Loader";
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 
 import ThemeContext from "./context/theme";
 import { STATICS } from "./statics";
@@ -65,7 +64,6 @@ function App() {
           />
         </Routes>
       </HashRouter>
-      <Footer />
     </ThemeContext.Provider>
   );
 }
