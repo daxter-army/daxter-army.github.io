@@ -4,13 +4,13 @@ import { useEffect, useState, lazy, Suspense, useMemo } from "react";
 import Loader from "./pages/Loader/Loader";
 import Header from "./components/Header/Header";
 
+const Home = lazy(() => import("./pages/Home/Home"));
+const Works = lazy(() => import("./pages/Works/Works"));
+
 import ThemeContext from "./context/theme";
 import { STATICS } from "./statics";
 
 import "./App.css";
-
-const Home = lazy(() => import("./pages/Home/Home"));
-const Works = lazy(() => import("./pages/Works/Works"));
 
 function App() {
   const [theme, setTheme] = useState(STATICS.LIGHT_THEME_MODE);
