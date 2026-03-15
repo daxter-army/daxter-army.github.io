@@ -1,19 +1,17 @@
 import { useTheme } from "../../context/theme";
 
-import NameSVG from "../../assets/name.svg";
-import NameSVGDark from "../../assets/nameDark.svg";
-
 import "./Showcase.css";
 
 const Showcase = () => {
   const { isLightTheme } = useTheme();
+  const imgSrc = isLightTheme ? "/name.svg" : "/nameDark.svg"
 
   return (
     <div className="showcaseWpr">
       <img
-        fetchpriority="high"
+        src={imgSrc}
         alt="name logo"
-        src={isLightTheme ? NameSVG : NameSVGDark}
+        fetchpriority="high"
       />
     </div>
   );
