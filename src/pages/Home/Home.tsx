@@ -66,12 +66,12 @@ const Home = () => {
               <strong className="year">2022</strong>
               <span>
                 Completed B.Tech in Computer Science from{" "}
-                <a href={STATICS.THAPAR_URL}>Thapar University (TIET), Patiala</a>
+                <a href={STATICS.THAPAR_URL}>Thapar University (TIET), Patiala, Punjab, India</a>
               </span>
             </p>
             <p className="bullet">
               <strong className="year">2022 to Present</strong>
-              <span>Working as a Professional in India</span>
+              <span>Working as a professional in India</span>
             </p>
           </div>
           <div className="info">
@@ -90,19 +90,19 @@ const Home = () => {
             <h2>Presence</h2>
             <nav>
               <a
-                className="iconLink"
-                href={STATICS.LINKED_URL}
                 target="_blank"
                 rel="noreferrer"
+                className="iconLink"
+                href={STATICS.LINKED_URL}
               >
                 <BsLinkedin size={18} />
                 <span>{STATICS.LINKEDIN_HANDLE}</span>
               </a>
               <a
-                className="iconLink"
-                href={STATICS.GITHUB_URL}
                 target="_blank"
                 rel="noreferrer"
+                className="iconLink"
+                href={STATICS.GITHUB_URL}
               >
                 <BsGithub size={18} />
                 <span>{STATICS.GITHUB_HANDLE}</span>
