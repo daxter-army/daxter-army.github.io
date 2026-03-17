@@ -10,10 +10,9 @@ import "./ThemeSwitcher.css";
 const ThemeSwitcher = () => {
   const darkBtnRef = useRef(null);
   const lightBtnRef = useRef(null);
+
   const { theme, themeHandler, isLightTheme } = useTheme();
   const btnRef = isLightTheme ? lightBtnRef : darkBtnRef;
-
-  const buttonIconComponent = isLightTheme ? <BsMoonFill /> : <BsSun />;
 
   const themeButtonHandler = () => {
     themeHandler(
@@ -35,7 +34,7 @@ const ThemeSwitcher = () => {
           onClick={themeButtonHandler}
           aria-label="theme changing button"
         >
-          {buttonIconComponent}
+          {isLightTheme ? <BsMoonFill /> : <BsSun />}
         </button>
       </CSSTransition>
     </SwitchTransition>
