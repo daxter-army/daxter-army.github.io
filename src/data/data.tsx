@@ -39,6 +39,15 @@ interface SkillItemsDataItem {
 export const workItemsData: WorkItemsDataItem[] = [
   {
     id: 1,
+    logoSrc: ZudokuIcon2x,
+    logoSrcSet: logoSrcSetGenerator(ZudokuIcon1x, ZudokuIcon2x),
+    title: "zudoku",
+    subTitle:
+      "Sudoku webapp specifically designed for iPad + apple pencil users.",
+    link: "https://daxter-army.github.io/zudoku/",
+  },
+  {
+    id: 2,
     logoSrc: LclIcon2x,
     logoSrcSet: logoSrcSetGenerator(LclIcon1x, LclIcon2x),
     title: "component-library",
@@ -47,7 +56,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://www.github.com/daxter-army/component-library/",
   },
   {
-    id: 2,
+    id: 3,
     logoSrc: ReactCPPWasmIcon2x,
     logoSrcSet: logoSrcSetGenerator(ReactCPPWasmIcon1x, ReactCPPWasmIcon2x),
     title: "react-cpp-wasm-todo-app",
@@ -56,7 +65,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://daxter-army.github.io/react-cpp-wasm-app/",
   },
   {
-    id: 3,
+    id: 4,
     logoSrc: RbdIcon2x,
     logoSrcSet: logoSrcSetGenerator(RbdIcon1x, RbdIcon2x),
     title: "react-beautiful-dropdown",
@@ -65,7 +74,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://daxter-army.github.io/react-dropdown/",
   },
   {
-    id: 4,
+    id: 5,
     logoSrc: SimplIcon2x,
     logoSrcSet: logoSrcSetGenerator(SimplIcon1x, SimplIcon2x),
     title: "simpl",
@@ -74,7 +83,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://daxter-army.github.io/simpl/",
   },
   {
-    id: 5,
+    id: 6,
     logoSrc: PyscrollIcon2x,
     logoSrcSet: logoSrcSetGenerator(PyscrollIcon1x, PyscrollIcon2x),
     title: "pyscroll",
@@ -83,7 +92,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://github.com/daxter-army/pyscroll/",
   },
   {
-    id: 6,
+    id: 7,
     logoSrc: KeycastIcon2x,
     logoSrcSet: logoSrcSetGenerator(KeycastIcon1x, KeycastIcon2x),
     title: "key-cast",
@@ -92,7 +101,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://daxter-army.github.io/key-cast/",
   },
   {
-    id: 7,
+    id: 8,
     logoSrc: CheatsheetIcon2x,
     logoSrcSet: logoSrcSetGenerator(CheatsheetIcon1x, CheatsheetIcon2x),
     title: "hooks-cheatsheet",
@@ -100,7 +109,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://github.com/daxter-army/react-hooks-cheatsheet",
   },
   {
-    id: 8,
+    id: 9,
     logoSrc: DriftIcon2x,
     logoSrcSet: logoSrcSetGenerator(DriftIcon1x, DriftIcon2x),
     title: "drift",
@@ -108,7 +117,7 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://github.com/daxter-army/drift",
   },
   {
-    id: 9,
+    id: 10,
     logoSrc: RbtIcon2x,
     logoSrcSet: logoSrcSetGenerator(RbtIcon1x, RbtIcon2x),
     title: "react-beautiful-tooltip",
@@ -117,23 +126,14 @@ export const workItemsData: WorkItemsDataItem[] = [
     link: "https://daxter-army.github.io/react-beautiful-tooltip/",
   },
   {
-    id: 10,
+    id: 11,
     logoSrc: RbcIcon2x,
     logoSrcSet: logoSrcSetGenerator(RbcIcon1x, RbcIcon2x),
     title: "react-beautiful-calendar",
     subTitle:
       "A beautiful react calendar component library for your beautiful react apps.",
     link: "https://daxter-army.github.io/react-beautiful-calendar/",
-  },
-  {
-    id: 11,
-    logoSrc: ZudokuIcon2x,
-    logoSrcSet: logoSrcSetGenerator(ZudokuIcon1x, ZudokuIcon2x),
-    title: "zudoku",
-    subTitle:
-      "Sudoku webapp specifically designed for iPad + apple pencil users.",
-    link: "https://daxter-army.github.io/zudoku/",
-  },
+  }
 ];
 
 export const skillItemsData: SkillItemsDataItem[] = [
