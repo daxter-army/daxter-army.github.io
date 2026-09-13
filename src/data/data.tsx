@@ -18,6 +18,8 @@ import ReactCPPWasmIcon2x from "../assets/rcppwasm.webp";
 import ReactCPPWasmIcon1x from "../assets/rcppwasm-1x.webp";
 import CheatsheetIcon2x from "../assets/hooks-cheatsheet.webp";
 import CheatsheetIcon1x from "../assets/hooks-cheatsheet-1x.webp";
+import ZudokuIcon2x from "../assets/zudoku.webp";
+import ZudokuIcon1x from "../assets/zudoku-1x.webp";
 import { logoSrcSetGenerator } from "../utils/utils";
 
 export interface WorkItemsDataItem {
@@ -123,6 +125,15 @@ export const workItemsData: WorkItemsDataItem[] = [
       "A beautiful react calendar component library for your beautiful react apps.",
     link: "https://daxter-army.github.io/react-beautiful-calendar/",
   },
+  {
+    id: 11,
+    logoSrc: ZudokuIcon2x,
+    logoSrcSet: logoSrcSetGenerator(ZudokuIcon1x, ZudokuIcon2x),
+    title: "zudoku",
+    subTitle:
+      "Sudoku webapp specifically designed for iPad + apple pencil users.",
+    link: "https://daxter-army.github.io/zudoku/",
+  },
 ];
 
 export const skillItemsData: SkillItemsDataItem[] = [
@@ -166,7 +177,7 @@ export const skillItemsData: SkillItemsDataItem[] = [
     id: 10,
     label: "Golang",
   },
-    {
+  {
     id: 11,
     label: "Docker",
   },
