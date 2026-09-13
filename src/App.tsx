@@ -1,5 +1,5 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
-import { useEffect, useState, lazy, Suspense, useMemo } from "react";
+import { useState, useLayoutEffect, useMemo, lazy, Suspense } from "react";
 
 import Loader from "./pages/Loader/Loader";
 import Header from "./components/Header/Header";
@@ -29,7 +29,7 @@ function App() {
     [theme]
   );
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (
       window.matchMedia(`(prefers-color-scheme: ${STATICS.DARK_THEME_MODE})`)
         .matches
