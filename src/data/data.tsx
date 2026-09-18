@@ -151,46 +151,55 @@ export const skillItemsData: SkillItemsDataItem[] = [
   },
   {
     id: 4,
-    label: "React.JS",
-  },
-  {
-    id: 5,
-    label: "Next.JS",
-  },
-  {
-    id: 6,
-    label: "Redux (react-redux)",
-  },
-  {
-    id: 7,
-    label: "Zustand",
-  },
-  {
-    id: 8,
-    label: "React Native",
-  },
-  {
-    id: 9,
     label: "Typescript",
   },
   {
+    id: 5,
+    label: "React.js",
+  },
+  {
+    id: 6,
+    label: "Next.js",
+  },
+  {
+    id: 7,
+    label: "Redux (react-redux)",
+  },
+  {
+    id: 8,
+    label: "Zustand",
+  },
+  {
+    id: 9,
+    label: "React Native",
+  },
+  {
     id: 10,
-    label: "Golang",
+    label: "Typescript",
   },
   {
     id: 11,
-    label: "Docker",
+    label: "Golang",
   },
   {
     id: 12,
-    label: "AWS",
+    label: "Docker",
   },
   {
     id: 13,
-    label: "SEO (Structured data, sitemaps)",
+    label: "AWS",
   },
   {
     id: 14,
+    label: "SEO (Structured data, sitemaps, web vitals)",
+  },
+  {
+    id: 15,
     label: "Git",
+  },
+  {
+    id: 16,
+    label:
+      "AI Engineering Workflow (rapid prototyping, debugging, refactoring, test generation etc)",
   },
 ];
