@@ -175,23 +175,23 @@ export const skillItemsData: SkillItemsDataItem[] = [
   },
   {
     id: 10,
-    label: "Typescript",
-  },
-  {
-    id: 11,
     label: "Golang",
   },
   {
-    id: 12,
+    id: 11,
     label: "Docker",
   },
   {
-    id: 13,
+    id: 12,
     label: "AWS",
   },
   {
+    id: 13,
+    label: "SEO (Structured data, sitemaps)",
+  },
+  {
     id: 14,
-    label: "SEO (Structured data, sitemaps, web vitals)",
+    label: "Web Vitals",
   },
   {
     id: 15,
