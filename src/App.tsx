@@ -4,6 +4,8 @@ import { useState, useLayoutEffect, useMemo, lazy, Suspense } from "react";
 import Loader from "./pages/Loader/Loader";
 import Header from "./components/Header/Header";
 
+import { useWebMcp } from "./hooks/useWebMcp";
+
 import ThemeContext from "./context/theme";
 import { STATICS } from "./statics";
 
@@ -13,6 +15,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Works = lazy(() => import("./pages/Works/Works"));
 
 function App() {
+  useWebMcp()
   const [theme, setTheme] = useState(STATICS.LIGHT_THEME_MODE);
 
   const themeHandler = (theme: string) => {

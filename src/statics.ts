@@ -20,4 +20,21 @@ export const STATICS = {
   AUTHOR_NAME: "Mehul Singh Teya",
   LIGHT_THEME_MODE: "light",
   DARK_THEME_MODE: "dark",
+  WEB_MCP: {
+    PROFILE_TOOL: {
+      NAME: "get_portfolio_profile",
+      TITLE: "Get portfolio profile",
+      DESCRIPTION:
+        "Return Mehul Singh Teya's professional summary, technical skills, and public profile links.",
+    },
+    PROJECT_SEARCH_TOOL: {
+      NAME: "search_projects",
+      TITLE: "Search portfolio projects",
+      DESCRIPTION:
+        "Find Mehul Singh Teya's projects by name, technology, or description. Returns project descriptions and public URLs.",
+      QUERY_DESCRIPTION:
+        'A name or technology such as "React", "WebAssembly", or "Sudoku". Leave empty to return every project.',
+    },
+    REGISTRATION_ERROR: "Unable to register WebMCP tools",
+  },
 };

@@ -6,6 +6,9 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": [
+      "@mcp-b/webmcp-types"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
